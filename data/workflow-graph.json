@@ -1,25 +1,16 @@
 {
-  "version": 1,
+  "version": 2,
   "notes": [
-    "Visual index only. The renderer paints this graph; live status comes from case progress. The graph never writes checklist or case data.",
-    "stepId is a navigation target into the wizard. Nodes without a real wizard step still point at the step where that decision is made."
+    "Visual index only. Never writes case or progress data.",
+    "Child task nodes are derived at runtime from each step’s guided panel checks (single source of truth).",
+    "A stage’s outgoing edge is blocked until that wizard step is complete — which requires its child checks.",
+    "Loop-backs are planning hints from existing runbook copy, not extra legal tracks."
   ],
-  "canvas": {
-    "width": 2620,
-    "height": 560
-  },
-  "nodes": [
+  "flow": [
     {
       "id": "orient",
-      "kind": "stage",
-      "x": 40,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.orient.title",
-      "summaryKey": "steps.orient.summary",
-      "noteKey": "overview.graph.notes.orient",
       "stepId": "orient",
+      "noteKey": "overview.graph.notes.orient",
       "links": [
         {
           "labelKey": "sources.hzzLmt",
@@ -33,15 +24,8 @@
     },
     {
       "id": "occupation",
-      "kind": "stage",
-      "x": 300,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.occupation.title",
-      "summaryKey": "steps.occupation.summary",
-      "noteKey": "overview.graph.notes.occupation",
       "stepId": "occupation",
+      "noteKey": "overview.graph.notes.occupation",
       "links": [
         {
           "labelKey": "sources.mupRadneDozvole",
@@ -51,15 +35,8 @@
     },
     {
       "id": "employer-package",
-      "kind": "stage",
-      "x": 560,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.employerPackage.title",
-      "summaryKey": "steps.employerPackage.summary",
-      "noteKey": "overview.graph.notes.package",
       "stepId": "employer-package",
+      "noteKey": "overview.graph.notes.package",
       "links": [
         {
           "labelKey": "sources.mupWorkTcn",
@@ -68,83 +45,43 @@
       ]
     },
     {
-      "id": "path-decision",
-      "kind": "decision",
-      "x": 820,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "overview.graph.nodes.decision",
-      "summaryKey": "overview.graph.summaries.decision",
+      "id": "path-split",
+      "kind": "split",
       "noteKey": "overview.graph.notes.decision",
-      "stepId": "occupation",
-      "branch": "decision"
-    },
-    {
-      "id": "branch-lmt",
-      "kind": "branch",
-      "x": 1080,
-      "y": 56,
-      "w": 210,
-      "h": 100,
-      "titleKey": "steps.lmt.title",
-      "summaryKey": "steps.lmt.summary",
-      "noteKey": "overview.graph.notes.branchLmt",
-      "stepId": "lmt",
-      "branch": "lmt",
-      "links": [
+      "paths": [
         {
-          "labelKey": "sources.hzzLmt",
-          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/novi-sustav-zaposljavanja-stranaca/"
+          "id": "lmt",
+          "stepId": "lmt",
+          "branch": "lmt",
+          "noteKey": "overview.graph.notes.branchLmt",
+          "links": [
+            {
+              "labelKey": "sources.hzzLmt",
+              "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/novi-sustav-zaposljavanja-stranaca/"
+            }
+          ]
         },
         {
-          "labelKey": "sources.hzzFilingTips",
-          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/savjeti-za-predaju-zahtjeva/"
+          "id": "uv-skip",
+          "kind": "virtual",
+          "branch": "uv",
+          "stepId": "occupation",
+          "titleKey": "overview.graph.nodes.branchUv",
+          "summaryKey": "overview.graph.summaries.branchUv",
+          "noteKey": "overview.graph.notes.branchUv",
+          "links": [
+            {
+              "labelKey": "sources.mupRadneDozvole",
+              "url": "https://mup.gov.hr/radne-dozvole/286764"
+            }
+          ]
         }
       ]
-    },
-    {
-      "id": "branch-uv",
-      "kind": "branch",
-      "x": 1080,
-      "y": 392,
-      "w": 210,
-      "h": 100,
-      "titleKey": "overview.graph.nodes.branchUv",
-      "summaryKey": "overview.graph.summaries.branchUv",
-      "noteKey": "overview.graph.notes.branchUv",
-      "stepId": "occupation",
-      "branch": "uv",
-      "links": [
-        {
-          "labelKey": "sources.mupRadneDozvole",
-          "url": "https://mup.gov.hr/radne-dozvole/286764"
-        }
-      ]
-    },
-    {
-      "id": "join-permit",
-      "kind": "join",
-      "x": 1350,
-      "y": 236,
-      "w": 180,
-      "h": 76,
-      "titleKey": "overview.graph.nodes.join",
-      "summaryKey": "overview.graph.summaries.join",
-      "noteKey": "overview.graph.notes.join",
-      "stepId": "worker-docs"
     },
     {
       "id": "worker-docs",
-      "kind": "stage",
-      "x": 1590,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.workerDocs.title",
-      "summaryKey": "steps.workerDocs.summary",
-      "noteKey": "overview.graph.notes.workerDocs",
       "stepId": "worker-docs",
+      "noteKey": "overview.graph.notes.workerDocs",
       "links": [
         {
           "labelKey": "sources.mupTempStay",
@@ -154,15 +91,8 @@
     },
     {
       "id": "file-permit",
-      "kind": "stage",
-      "x": 1850,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.filePermit.title",
-      "summaryKey": "steps.filePermit.summary",
-      "noteKey": "overview.graph.notes.filePermit",
       "stepId": "file-permit",
+      "noteKey": "overview.graph.notes.filePermit",
       "links": [
         {
           "labelKey": "sources.mupWorkTcn",
@@ -176,15 +106,8 @@
     },
     {
       "id": "start-work",
-      "kind": "stage",
-      "x": 2110,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.startWork.title",
-      "summaryKey": "steps.startWork.summary",
-      "noteKey": "overview.graph.notes.startWork",
       "stepId": "start-work",
+      "noteKey": "overview.graph.notes.startWork",
       "links": [
         {
           "labelKey": "sources.mupTempStay",
@@ -194,15 +117,8 @@
     },
     {
       "id": "comply",
-      "kind": "stage",
-      "x": 2370,
-      "y": 224,
-      "w": 200,
-      "h": 100,
-      "titleKey": "steps.comply.title",
-      "summaryKey": "steps.comply.summary",
-      "noteKey": "overview.graph.notes.comply",
       "stepId": "comply",
+      "noteKey": "overview.graph.notes.comply",
       "links": [
         {
           "labelKey": "sources.nn552026",
@@ -211,17 +127,30 @@
       ]
     }
   ],
-  "edges": [
-    { "from": "orient", "to": "occupation" },
-    { "from": "occupation", "to": "employer-package" },
-    { "from": "employer-package", "to": "path-decision" },
-    { "from": "path-decision", "to": "branch-lmt", "branch": "lmt" },
-    { "from": "path-decision", "to": "branch-uv", "branch": "uv" },
-    { "from": "branch-lmt", "to": "join-permit", "branch": "lmt" },
-    { "from": "branch-uv", "to": "join-permit", "branch": "uv" },
-    { "from": "join-permit", "to": "worker-docs" },
-    { "from": "worker-docs", "to": "file-permit" },
-    { "from": "file-permit", "to": "start-work" },
-    { "from": "start-work", "to": "comply" }
+  "loops": [
+    {
+      "id": "lmt-negative",
+      "from": "lmt",
+      "fromCheck": "notice-outcome",
+      "to": "occupation",
+      "titleKey": "overview.graph.loops.lmtNegative.title",
+      "noteKey": "overview.graph.loops.lmtNegative.note"
+    },
+    {
+      "id": "lmt-window",
+      "from": "lmt",
+      "fromCheck": "ninety-day-clock",
+      "to": "lmt",
+      "titleKey": "overview.graph.loops.lmtWindow.title",
+      "noteKey": "overview.graph.loops.lmtWindow.note"
+    },
+    {
+      "id": "permit-negative",
+      "from": "start-work",
+      "fromCheck": "await-decision",
+      "to": "file-permit",
+      "titleKey": "overview.graph.loops.permitNegative.title",
+      "noteKey": "overview.graph.loops.permitNegative.note"
+    }
   ]
 }

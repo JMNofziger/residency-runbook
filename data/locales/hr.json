@@ -1124,13 +1124,15 @@
   "overview": {
     "kicker": "Zagrebački put zapošljavanja",
     "title": "Gdje je ovaj predmet",
-    "lead": "Samo-za-čitanje karta puta zapošljavanja: gdje je predmet, koja je grana aktivna i što se još mora spojiti. Otvorite čvor za detalje ili prijeđite na kontrolni popis za izmjene.",
+    "lead": "Na prvi pogled: koja je faza otvorena, koji podzadaci još blokiraju sljedeću fazu i koji se povrati primjenjuju ako podnošenje ne uspije. Karta je samo za čitanje — izmjene su na kontrolnom popisu.",
     "caseLabel": "Aktivni predmet",
     "noCase": "Nema učitanog predmeta",
     "positionLabel": "Trenutni položaj",
     "positionAt": "Korak {n}/{total}: {step}",
     "notStarted": "Nije započeto — počnite provjerom zanimanja",
     "branchLabel": "Aktivna grana",
+    "subtasksLabel": "Otvoreni podzadaci",
+    "subtasksOpen": "{open} od {total} još otvoreno",
     "branchTitle": "Točka grananja nakon paketa",
     "branchLead": "Ili pokrenite HZZ {lmt}, ili ga preskočite samo kad uvjeti članka 99. / {uv} stvarno odgovaraju.",
     "branchLmt": "Pokreće se HZZ {lmt}",
@@ -1147,15 +1149,25 @@
       "upcoming": "Sljedeće"
     },
     "graph": {
-      "hint": "Povucite za pomicanje · kotačić za zum · kliknite čvor za detalje. Ova karta ne mijenja predmet.",
+      "hint": "Proširite fazu da vidite paralelne podzadatke koji moraju biti gotovi prije sljedeće faze. Povucite za pomicanje · kotačić za zum. Ova karta ne mijenja predmet.",
       "zoomLabel": "Zum karte",
       "zoomIn": "Uvećaj",
       "zoomOut": "Umanji",
       "zoomFit": "Prilagodi",
+      "expand": "Prikaži podzadatke",
+      "collapse": "Sakrij podzadatke",
+      "expandCurrent": "Proširi trenutno",
+      "expandBlocking": "Proširi što blokira",
+      "collapseAll": "Sažmi sve",
+      "cleared": "{done}/{total} gotovo",
+      "blocking": "{n} blokira sljedeće",
+      "subtasks": "Podzadaci (svi obvezni)",
+      "gateBlocked": "Ovi podzadaci još su otvoreni, pa sljedeća faza ostaje zaključana.",
+      "loopHint": "Planerska petlja — nije dodatni pravni put. Radite povezani korak ako se ovaj problem stvarno dogodi.",
       "details": "Detalji čvora",
       "openStep": "Otvori ovaj korak u kontrolnom popisu",
       "stepLockedHint": "Dovršite ranije korake u kontrolnom popisu prije rada ovdje.",
-      "inspectorEmpty": "Odaberite čvor da vidite što pokriva, službene poveznice i sliku kontrolnog popisa samo za čitanje. Izmjene su na stranici koraka, ne na ovoj karti.",
+      "inspectorEmpty": "Odaberite fazu, podzadatak ili petlju. Podzadaci su stvarni rad; faza ne može završiti dok se ne označe na kontrolnom popisu.",
       "links": "Službene stranice",
       "checklist": "Slika kontrolnog popisa",
       "readOnlyChecks": "Prikazano kakvo jest iz predmeta. Označite stavke na stranici koraka.",
@@ -1163,7 +1175,9 @@
         "stage": "Faza",
         "decision": "Odluka",
         "branch": "Grana",
-        "join": "Spoj"
+        "join": "Spoj",
+        "task": "Podzadatak",
+        "loop": "Povrat"
       },
       "status": {
         "unresolved": "Neriješeno",
@@ -1191,6 +1205,20 @@
         "filePermit": "Podnesite na nadležnom zagrebačkom šalteru policije / MUP-a. Pristojbe i obrasci su na koraku s citatima.",
         "startWork": "Odluka, biometrija, prijava adrese te prijave za socijalno/porez prije odobrenog početka rada.",
         "comply": "Držite datume, prozore mobilnosti i jezični plan u kalendaru nakon početka rada."
+      },
+      "loops": {
+        "lmtNegative": {
+          "title": "Ako HZZ odbije test",
+          "note": "Negativno mišljenje o tržištu rada znači revidirati naziv/dužnosti zanimanja ili ponovno procijeniti stvarni preskok s liste deficitarnih zanimanja, zatim ponovno podnijeti. Ne zanemarujte razloge iz mišljenja."
+        },
+        "lmtWindow": {
+          "title": "Ako istekne rok podnošenja",
+          "note": "Pozitivno mišljenje vremenski je ograničeno. Ako citirani rok za podnošenje boravka i rada istekne, posao testa tržišta rada se ponavlja prije podnošenja."
+        },
+        "permitNegative": {
+          "title": "Ako se dozvola odbije",
+          "note": "Negativna odluka o boravku i radu vraća vas na paket podnošenja i navedene razloge. Ova karta ne izmišlja zaseban žalbeni put."
+        }
       }
     }
   },

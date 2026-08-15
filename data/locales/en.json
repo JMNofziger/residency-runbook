@@ -1124,13 +1124,15 @@
   "overview": {
     "kicker": "Zagreb hiring path",
     "title": "Where this case sits",
-    "lead": "A read-only map of the hiring path: where this case sits, which branch is active, and what still has to converge. Open a node for details, or jump into the checklist to make changes.",
+    "lead": "Glance the hiring path: which stage is open, which child tasks still block the next stage, and which loop-backs apply if a filing fails. The map is read-only — changes happen on the checklist.",
     "caseLabel": "Active case",
     "noCase": "No case loaded yet",
     "positionLabel": "Current position",
     "positionAt": "Step {n}/{total}: {step}",
     "notStarted": "Not started — begin at occupation check",
     "branchLabel": "Active branch",
+    "subtasksLabel": "Open subtasks",
+    "subtasksOpen": "{open} of {total} still open",
     "branchTitle": "Branch point after the package",
     "branchLead": "Either run the HZZ {lmt}, or skip it only when Article 99 / {uv} conditions truly fit.",
     "branchLmt": "Running the HZZ {lmt}",
@@ -1147,15 +1149,25 @@
       "upcoming": "Next"
     },
     "graph": {
-      "hint": "Drag to pan · scroll to zoom · click a node for details. This map does not change the case.",
+      "hint": "Expand a stage to see the parallel child tasks that must clear before the next stage. Drag to pan · scroll to zoom. This map does not change the case.",
       "zoomLabel": "Map zoom",
       "zoomIn": "Zoom in",
       "zoomOut": "Zoom out",
       "zoomFit": "Fit",
+      "expand": "Show subtasks",
+      "collapse": "Hide subtasks",
+      "expandCurrent": "Expand current",
+      "expandBlocking": "Expand blocking",
+      "collapseAll": "Collapse all",
+      "cleared": "{done}/{total} cleared",
+      "blocking": "{n} blocking next",
+      "subtasks": "Child tasks (all required)",
+      "gateBlocked": "These child tasks are still open, so the next stage stays locked.",
+      "loopHint": "A planning loop — not an extra legal track. Work the linked step if this issue actually happens.",
       "details": "Node details",
       "openStep": "Open this step in the checklist",
       "stepLockedHint": "Finish earlier steps in the checklist before you can work here.",
-      "inspectorEmpty": "Select a node to see what it covers, official links, and a read-only snapshot of its checklist. Changes happen on the step page, not on this map.",
+      "inspectorEmpty": "Select a stage, child task, or loop. Child tasks are the real work; the stage cannot finish until they are cleared on the checklist.",
       "links": "Official pages",
       "checklist": "Checklist snapshot",
       "readOnlyChecks": "Shown as-is from the case. Tick items on the step page.",
@@ -1163,7 +1175,9 @@
         "stage": "Stage",
         "decision": "Decision",
         "branch": "Branch",
-        "join": "Join"
+        "join": "Join",
+        "task": "Subtask",
+        "loop": "Loop-back"
       },
       "status": {
         "unresolved": "Unresolved",
@@ -1191,6 +1205,20 @@
         "filePermit": "File at the competent Zagreb police / MUP desk. Fees and forms live on the step with citations.",
         "startWork": "Decision, biometrics, address registration, and social/tax filings before authorized start.",
         "comply": "Keep dates, mobility windows, and language-plan items on a calendar after the hire starts."
+      },
+      "loops": {
+        "lmtNegative": {
+          "title": "If HZZ refuses the test",
+          "note": "A negative labor-market notice means revise the occupation title/duties or reassess a genuine deficitary-list skip, then refile. Do not ignore the grounds on the notice."
+        },
+        "lmtWindow": {
+          "title": "If the filing window lapses",
+          "note": "A positive notice is time-limited. If the cited stay-and-work filing window lapses, the labor market test work is repeated before filing."
+        },
+        "permitNegative": {
+          "title": "If the permit is refused",
+          "note": "A negative stay-and-work decision sends you back to the filing package and the stated grounds. This map does not invent a separate appeal track."
+        }
       }
     }
   },
