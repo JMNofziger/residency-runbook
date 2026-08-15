@@ -44,7 +44,7 @@ npm run test:gates
 npm run audit:facts   # regenerates artifacts/facts-audit.*
 ```
 
-GitHub Actions (`.github/workflows/lint-facts.yml`) runs fact lint, locale parity, and gate smoke on pushes/PRs to `main`.
+GitHub Actions (`.github/workflows/lint-facts.yml`) runs fact lint, locale parity, and gate smoke on pushes/PRs to `main`. Static GitHub Pages deploy (`.github/workflows/pages.yml`) is **manual** (`workflow_dispatch`) so a missing Pages setting cannot fail CI. Enable Pages (Settings → Pages → GitHub Actions), run the workflow, then record the production URL — see [`DEVELOPMENT.md`](DEVELOPMENT.md).
 
 Shared fees live in [`data/facts-catalog.json`](data/facts-catalog.json); contested alternate readings in [`data/uncertainty.json`](data/uncertainty.json). See [`data/facts.schema.md`](data/facts.schema.md).
 

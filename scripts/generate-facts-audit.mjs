@@ -52,7 +52,7 @@ function isFactsArrayItemPath(pathStr) {
 }
 
 function ageDays(verifiedDate) {
-  return Math.floor((Date.UTC(2026, 6, 31) - Date.parse(verifiedDate)) / (24 * 3600 * 1000));
+  return Math.floor((Date.UTC(2026, 7, 15) - Date.parse(verifiedDate)) / (24 * 3600 * 1000));
 }
 
 function pushFact(acc, node, file, pathStr, idOverride = null) {
@@ -110,7 +110,7 @@ for (const file of TARGETS.flatMap(listJsonFiles)) {
 
 facts.sort((a, b) => String(a.id).localeCompare(String(b.id)) || a.path.localeCompare(b.path));
 
-const auditDate = "2026-07-31";
+const auditDate = "2026-08-15";
 const payload = {
   generatedAt: auditDate,
   caseId: "example-dool-us-manual-labor",
@@ -126,6 +126,7 @@ const payload = {
     "CONFIRMED on MUP long-term page: €83.62 decision fee.",
     "CONFIRMED on NN 55/2026: general force 2026-06-04; 90-day decision deadline; employer-change after 6 months; unemployment 3/6 months with 2-year qualifier; A1.1 after 1 year stay; Art. 92.a(1)/(4)/(6) deferred to 2027-06-04.",
     "CONFIRMED on MVEP granting-stay page: short-stay 90/180; alien self-registration within 2 days if provider cannot register (provider: 1 day via eVisitor).",
+    "CONFIRMED on MUP address-registration procedure page (2026-08-15): TCN on temporary stay must register boravište / address (and changes) within 3 days of entry or of the change (Form 16a). Distinct from short-stay eVisitor self-registration.",
     "UV list: no newer public UV decision PDF found; still shipping official 2023-03 MUP/HZZ PDF with stale-edition banner.",
     "OMITTED: Blue Card validity months (not stated on live MUP Blue Card page / not confirmed in NN 55/2026 excerpt); Blue Card fee schedule (wrong path); seasonal/student numerics; Form 17a field specs.",
     "Case revenue remains case data, not a legal fact — still needs live tax/bank verification before filing.",

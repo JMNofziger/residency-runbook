@@ -1,5 +1,23 @@
 import { I18n } from "./i18n.js";
-import { renderFactList } from "./facts.js";
+import { FactsCatalog, renderFactList } from "./facts.js";
+
+/** Map catalog facts on a check to {deadline}/{fee} locale placeholders. */
+function checkFactVars(check) {
+  const vars = {};
+  let resolved = [];
+  try {
+    resolved = FactsCatalog.resolve(check.facts || []);
+  } catch {
+    return vars;
+  }
+  for (const f of resolved) {
+    if (!f || f.value == null) continue;
+    const id = String(f.id || "");
+    if (/deadline/i.test(id)) vars.deadline = f.value;
+    if (/fee/i.test(id) && vars.fee == null) vars.fee = f.value;
+  }
+  return vars;
+}
 
 function esc(s) {
   return String(s ?? "")
@@ -84,9 +102,10 @@ export function createGuidedPanel({ url, idPrefix, panelDomId }) {
           ${checks
             .map((check) => {
               const id = `${idPrefix}:${check.id}`;
+              const factVars = { ...vars, ...checkFactVars(check) };
               const how = (check.howSteps || [])
                 .map((step) => {
-                  const label = esc(I18n.t(step.labelKey));
+                  const label = esc(I18n.t(step.labelKey, factVars));
                   if (step.url) {
                     return `<li><a href="${escAttr(step.url)}" target="_blank" rel="noopener noreferrer">${label}</a></li>`;
                   }
@@ -94,20 +113,20 @@ export function createGuidedPanel({ url, idPrefix, panelDomId }) {
                 })
                 .join("");
               const hints = (check.caseHintKeys || [])
-                .map((key) => `<p class="case-hint">${esc(I18n.t(key, vars))}</p>`)
+                .map((key) => `<p class="case-hint">${esc(I18n.t(key, factVars))}</p>`)
                 .join("");
               return `
                 <li class="guided-item art99-item ${isChecked(id) ? "is-done" : ""}">
                   <div class="guided-item-head art99-item-head">
                     <span class="guided-order art99-order">${check.order}</span>
-                    <h4>${esc(I18n.t(check.titleKey))}</h4>
+                    <h4>${esc(I18n.t(check.titleKey, factVars))}</h4>
                   </div>
-                  <p>${esc(I18n.t(check.whyKey))}</p>
+                  <p>${esc(I18n.t(check.whyKey, factVars))}</p>
                   <div class="guided-how art99-how">
                     <strong>${esc(I18n.t("guided.howLabel"))}</strong>
                     <ol>${how}</ol>
                   </div>
-                  <p><strong>${esc(I18n.t("guided.evidenceLabel"))}</strong> ${esc(I18n.t(check.evidenceKey))}</p>
+                  <p><strong>${esc(I18n.t("guided.evidenceLabel"))}</strong> ${esc(I18n.t(check.evidenceKey, factVars))}</p>
                   ${hints}
                   ${renderFactList(check.facts || [])}
                   <label class="check-row guided-pass art99-pass">

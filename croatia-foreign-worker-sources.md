@@ -10,6 +10,7 @@ Aliens Act amendments (**NN 55/2026**) entered force **2026-06-04**. Prefer post
 |---|---|---|
 | MUP — Stay and work hub | Overview | https://mup.gov.hr/aliens-281621/stay-and-work/281622 |
 | MUP — Work of third-country nationals | Stay-and-work rules / fees | https://mup.gov.hr/aliens-281621/stay-and-work/work-of-third-country-nationals/281663 |
+| MUP — Address registration (foreigners) | Post-permit boravište / address deadline, Form 16a | https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913 |
 | MUP — Temporary stay | Docs, competence, biometrics context | https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-third-country-nationals/281661 |
 | MUP — Obrasci | Form 2a and other official forms | https://mup.gov.hr/obrasci-281565/281565 |
 | MUP — Long-term / permanent | Later stay pathways | https://mup.gov.hr/aliens-281621/stay-and-work/long-term-residence-and-permanent-stay/281682 |

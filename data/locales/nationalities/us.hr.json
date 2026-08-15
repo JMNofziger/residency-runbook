@@ -36,7 +36,7 @@
     "mvepLink": "MVEP — Odobravanje boravka u Hrvatskoj",
     "registration": {
       "label": "Isplanirajte prijavu smještaja nakon dolaska",
-      "help": "MVEP: pružatelji smještaja uobičajeno prijavljuju goste brzo putem eVisitora; ako ne mogu, stranac se mora sam prijaviti unutar citiranog roka od ulaska ili promjene adrese. Hoteli to često odrade. Potvrdite aktualnu MUP/eVisitor praksu za vaš tip smještaja. Citirani rok:"
+      "help": "MVEP: pružatelji smještaja uobičajeno prijavljuju goste brzo putem eVisitora; ako ne mogu, stranac se mora sam prijaviti unutar citiranog roka od ulaska ili promjene adrese. Hoteli to često odrade. Ova kratkotrajna obveza nije rok prijave boravišta nakon dozvole u koraku 7. Potvrdite aktualnu MUP/eVisitor praksu za vaš tip smještaja. Citirani rok:"
     },
     "names": {
       "label": "Držite pravno ime istim na svim dokumentima",
