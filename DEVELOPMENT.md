@@ -18,13 +18,14 @@ Progress board for the Croatia employer hiring runbook.
 | 7 | More nationality packs (beyond US) | Next (discovery — Linear RES-8) |
 | 8a | CI lint-facts + gate smoke | Done |
 | 8b | EN/HR locale parity CI + fee uncertainty cards + workflow overview | Done (Linear RES-18) |
+| UX | Read-only node graph on overview (pan/zoom, inspector, jump to step) | Done |
 | Trust | Canonical fact catalog + fee-history guardrails | Done (Linear RES-5, RES-6) |
 | UX | Offices addresses, theme icon, footer reset+backup, import activation, one-shot export nudge | Done |
 | 8 | Hosting (static deploy) | Planned (Linear RES-11) |
 
 ## Current product shape (as of 2026-07-31)
 
-- Lands on **workflow overview**; checklist is one click away (top bar / footer / hero CTA)
+- Lands on **workflow overview**; a read-only node graph shows stage → branch → join; checklist work happens on the step pages
 - **Import** registers the hire in the sidebar for the session and applies imported progress
 - **Export** is the durable artifact; localStorage is cache; nudge once per session + `beforeunload` if still dirty
 - Office drawer carries **Grad Zagreb** desk addresses and a small scope note (not a global chrome banner)

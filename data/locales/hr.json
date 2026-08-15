@@ -1124,7 +1124,7 @@
   "overview": {
     "kicker": "Zagrebački put zapošljavanja",
     "title": "Gdje je ovaj predmet",
-    "lead": "Vizualna karta grane testa tržišta rada i puta jedinstvene dozvole. Otvorite kontrolni popis kad ste spremni raditi korak.",
+    "lead": "Samo-za-čitanje karta puta zapošljavanja: gdje je predmet, koja je grana aktivna i što se još mora spojiti. Otvorite čvor za detalje ili prijeđite na kontrolni popis za izmjene.",
     "caseLabel": "Aktivni predmet",
     "noCase": "Nema učitanog predmeta",
     "positionLabel": "Trenutni položaj",
@@ -1145,6 +1145,53 @@
       "current": "Ovdje ste",
       "locked": "Zaključano",
       "upcoming": "Sljedeće"
+    },
+    "graph": {
+      "hint": "Povucite za pomicanje · kotačić za zum · kliknite čvor za detalje. Ova karta ne mijenja predmet.",
+      "zoomLabel": "Zum karte",
+      "zoomIn": "Uvećaj",
+      "zoomOut": "Umanji",
+      "zoomFit": "Prilagodi",
+      "details": "Detalji čvora",
+      "openStep": "Otvori ovaj korak u kontrolnom popisu",
+      "stepLockedHint": "Dovršite ranije korake u kontrolnom popisu prije rada ovdje.",
+      "inspectorEmpty": "Odaberite čvor da vidite što pokriva, službene poveznice i sliku kontrolnog popisa samo za čitanje. Izmjene su na stranici koraka, ne na ovoj karti.",
+      "links": "Službene stranice",
+      "checklist": "Slika kontrolnog popisa",
+      "readOnlyChecks": "Prikazano kakvo jest iz predmeta. Označite stavke na stranici koraka.",
+      "kind": {
+        "stage": "Faza",
+        "decision": "Odluka",
+        "branch": "Grana",
+        "join": "Spoj"
+      },
+      "status": {
+        "unresolved": "Neriješeno",
+        "inactive": "Nije ovaj put"
+      },
+      "nodes": {
+        "decision": "Koji put",
+        "branchUv": "Preskok UV",
+        "join": "Spoj"
+      },
+      "summaries": {
+        "decision": "Nakon paketa poslodavca ili pokrenite HZZ test tržišta rada, ili ga preskočite samo kad zanimanje stvarno odgovara službenom popisu deficitarnih zanimanja.",
+        "branchUv": "Preskočite test tržišta rada samo za navedeni deficitarni naziv s odgovarajućim dužnostima i uvjetima poslodavca.",
+        "join": "Obje grane se ponovno spajaju prije dokumenata radnika i podnošenja za boravak i rad."
+      },
+      "notes": {
+        "orient": "Potvrdite put jedinstvene dozvole i podobnost poslodavca. Pogrešni putevi (Blue Card, sezonski prečaci) navedeni su na koraku.",
+        "occupation": "Zaključajte obraniv naziv i ovdje odaberite granu testa tržišta rada ili preskoka. Karta samo prikazuje taj izbor.",
+        "package": "Ugovor, plaća, smještaj i porezna spremnost prije podnošenja HZZ-u ili MUP-u.",
+        "decision": "Birano na koraku zanimanja. Ovaj čvor ne sprema zasebnu odluku.",
+        "branchLmt": "Zadani put: podnesite test tržišta rada na HZZ-u, zatim koristite prozor pozitivnog mišljenja.",
+        "branchUv": "Ne tretirajte ovu granu kao prečac. Potvrdite živi službeni popis na koraku zanimanja.",
+        "join": "Podnošenje za boravak i rad je isti šalter u oba slučaja. Korak testa tržišta rada je prolaz kad je aktivna grana preskoka.",
+        "workerDocs": "Spis radnika plus stavke ovisne o državljanstvu (npr. FBI za SAD) na stranici koraka.",
+        "filePermit": "Podnesite na nadležnom zagrebačkom šalteru policije / MUP-a. Pristojbe i obrasci su na koraku s citatima.",
+        "startWork": "Odluka, biometrija, prijava adrese te prijave za socijalno/porez prije odobrenog početka rada.",
+        "comply": "Držite datume, prozore mobilnosti i jezični plan u kalendaru nakon početka rada."
+      }
     }
   },
   "uncertainty": {

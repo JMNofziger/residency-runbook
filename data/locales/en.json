@@ -1124,7 +1124,7 @@
   "overview": {
     "kicker": "Zagreb hiring path",
     "title": "Where this case sits",
-    "lead": "A visual map of the labour-market test branch and the Single Permit track. Open the checklist when you are ready to work a step.",
+    "lead": "A read-only map of the hiring path: where this case sits, which branch is active, and what still has to converge. Open a node for details, or jump into the checklist to make changes.",
     "caseLabel": "Active case",
     "noCase": "No case loaded yet",
     "positionLabel": "Current position",
@@ -1145,6 +1145,53 @@
       "current": "You are here",
       "locked": "Locked",
       "upcoming": "Next"
+    },
+    "graph": {
+      "hint": "Drag to pan · scroll to zoom · click a node for details. This map does not change the case.",
+      "zoomLabel": "Map zoom",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "zoomFit": "Fit",
+      "details": "Node details",
+      "openStep": "Open this step in the checklist",
+      "stepLockedHint": "Finish earlier steps in the checklist before you can work here.",
+      "inspectorEmpty": "Select a node to see what it covers, official links, and a read-only snapshot of its checklist. Changes happen on the step page, not on this map.",
+      "links": "Official pages",
+      "checklist": "Checklist snapshot",
+      "readOnlyChecks": "Shown as-is from the case. Tick items on the step page.",
+      "kind": {
+        "stage": "Stage",
+        "decision": "Decision",
+        "branch": "Branch",
+        "join": "Join"
+      },
+      "status": {
+        "unresolved": "Unresolved",
+        "inactive": "Not this path"
+      },
+      "nodes": {
+        "decision": "Which path",
+        "branchUv": "UV skip",
+        "join": "Converge"
+      },
+      "summaries": {
+        "decision": "After the employer package, either run the HZZ labor market test or skip it only when the occupation truly matches the official deficitary list.",
+        "branchUv": "Skip the labor market test only for a listed deficitary title with matching duties and employer conditions.",
+        "join": "Both branches meet again before worker documents and the stay-and-work filing."
+      },
+      "notes": {
+        "orient": "Confirm the Single Permit path and employer fitness. Wrong routes (Blue Card, seasonal shortcuts) are called out on the step.",
+        "occupation": "Lock a defensible title and choose the labor-market-test vs skip branch here. The map only displays that choice.",
+        "package": "Contract, pay, housing, and tax readiness before HZZ or MUP filing.",
+        "decision": "Chosen on the occupation step. This node does not store a separate decision.",
+        "branchLmt": "Default path: file the labor market test at HZZ, then use the positive-notice window.",
+        "branchUv": "Do not treat this branch as a shortcut. Confirm the live official list on the occupation step.",
+        "join": "The stay-and-work filing is the same desk either way. The labor market test step is a pass-through when the skip branch is active.",
+        "workerDocs": "Worker file plus nationality-specific items (for example U.S. FBI checks) on the step page.",
+        "filePermit": "File at the competent Zagreb police / MUP desk. Fees and forms live on the step with citations.",
+        "startWork": "Decision, biometrics, address registration, and social/tax filings before authorized start.",
+        "comply": "Keep dates, mobility windows, and language-plan items on a calendar after the hire starts."
+      }
     }
   },
   "uncertainty": {
