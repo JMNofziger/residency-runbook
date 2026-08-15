@@ -15,7 +15,8 @@ import { Reference } from "./reference.js";
 import { canEnterStep, canMarkStepComplete } from "./step-gates.js";
 import { toBundle, downloadBundle, parseFile } from "./case-file.js";
 import { Uncertainty } from "./uncertainty.js";
-import { renderWorkflowOverview } from "./overview.js";
+import { renderWorkflowOverview, bindWorkflowOverview } from "./overview.js";
+import { WorkflowGraph } from "./workflow-graph.js";
 
 const GUIDED_PANELS = {
   art99: Art99,
@@ -676,11 +677,14 @@ function renderOverviewMain() {
   document.getElementById("btn-enter-wizard")?.addEventListener("click", () => {
     enterWizardAt(state.stepIndex);
   });
-  document.querySelectorAll("[data-overview-step]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.disabled) return;
-      enterWizardAt(Number(btn.getAttribute("data-overview-step")));
-    });
+  bindWorkflowOverview(document.getElementById("overview-home"), {
+    steps: state.stepsData.steps,
+    progress: state.progress,
+    stepIndex: state.stepIndex,
+    onOpenStep: (index) => {
+      if (!canEnterStep(state.stepsData.steps, index, state.progress)) return;
+      enterWizardAt(index);
+    },
   });
 }
 
@@ -1022,6 +1026,7 @@ async function init() {
       Reference.load(),
       Uncertainty.load(),
       FactsCatalog.load(),
+      WorkflowGraph.load(),
     ]);
     state.caseData = caseData;
     state.stepsData = stepsData;

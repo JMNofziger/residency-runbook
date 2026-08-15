@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "notes": [
+    "Visual index only. The renderer paints this graph; live status comes from case progress. The graph never writes checklist or case data.",
+    "stepId is a navigation target into the wizard. Nodes without a real wizard step still point at the step where that decision is made."
+  ],
+  "canvas": {
+    "width": 2620,
+    "height": 560
+  },
+  "nodes": [
+    {
+      "id": "orient",
+      "kind": "stage",
+      "x": 40,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.orient.title",
+      "summaryKey": "steps.orient.summary",
+      "noteKey": "overview.graph.notes.orient",
+      "stepId": "orient",
+      "links": [
+        {
+          "labelKey": "sources.hzzLmt",
+          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/novi-sustav-zaposljavanja-stranaca/"
+        },
+        {
+          "labelKey": "sources.mupStayWork",
+          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/281622"
+        }
+      ]
+    },
+    {
+      "id": "occupation",
+      "kind": "stage",
+      "x": 300,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.occupation.title",
+      "summaryKey": "steps.occupation.summary",
+      "noteKey": "overview.graph.notes.occupation",
+      "stepId": "occupation",
+      "links": [
+        {
+          "labelKey": "sources.mupRadneDozvole",
+          "url": "https://mup.gov.hr/radne-dozvole/286764"
+        }
+      ]
+    },
+    {
+      "id": "employer-package",
+      "kind": "stage",
+      "x": 560,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.employerPackage.title",
+      "summaryKey": "steps.employerPackage.summary",
+      "noteKey": "overview.graph.notes.package",
+      "stepId": "employer-package",
+      "links": [
+        {
+          "labelKey": "sources.mupWorkTcn",
+          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/work-of-third-country-nationals/281663"
+        }
+      ]
+    },
+    {
+      "id": "path-decision",
+      "kind": "decision",
+      "x": 820,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "overview.graph.nodes.decision",
+      "summaryKey": "overview.graph.summaries.decision",
+      "noteKey": "overview.graph.notes.decision",
+      "stepId": "occupation",
+      "branch": "decision"
+    },
+    {
+      "id": "branch-lmt",
+      "kind": "branch",
+      "x": 1080,
+      "y": 56,
+      "w": 210,
+      "h": 100,
+      "titleKey": "steps.lmt.title",
+      "summaryKey": "steps.lmt.summary",
+      "noteKey": "overview.graph.notes.branchLmt",
+      "stepId": "lmt",
+      "branch": "lmt",
+      "links": [
+        {
+          "labelKey": "sources.hzzLmt",
+          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/novi-sustav-zaposljavanja-stranaca/"
+        },
+        {
+          "labelKey": "sources.hzzFilingTips",
+          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/savjeti-za-predaju-zahtjeva/"
+        }
+      ]
+    },
+    {
+      "id": "branch-uv",
+      "kind": "branch",
+      "x": 1080,
+      "y": 392,
+      "w": 210,
+      "h": 100,
+      "titleKey": "overview.graph.nodes.branchUv",
+      "summaryKey": "overview.graph.summaries.branchUv",
+      "noteKey": "overview.graph.notes.branchUv",
+      "stepId": "occupation",
+      "branch": "uv",
+      "links": [
+        {
+          "labelKey": "sources.mupRadneDozvole",
+          "url": "https://mup.gov.hr/radne-dozvole/286764"
+        }
+      ]
+    },
+    {
+      "id": "join-permit",
+      "kind": "join",
+      "x": 1350,
+      "y": 236,
+      "w": 180,
+      "h": 76,
+      "titleKey": "overview.graph.nodes.join",
+      "summaryKey": "overview.graph.summaries.join",
+      "noteKey": "overview.graph.notes.join",
+      "stepId": "worker-docs"
+    },
+    {
+      "id": "worker-docs",
+      "kind": "stage",
+      "x": 1590,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.workerDocs.title",
+      "summaryKey": "steps.workerDocs.summary",
+      "noteKey": "overview.graph.notes.workerDocs",
+      "stepId": "worker-docs",
+      "links": [
+        {
+          "labelKey": "sources.mupTempStay",
+          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-third-country-nationals/281661"
+        }
+      ]
+    },
+    {
+      "id": "file-permit",
+      "kind": "stage",
+      "x": 1850,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.filePermit.title",
+      "summaryKey": "steps.filePermit.summary",
+      "noteKey": "overview.graph.notes.filePermit",
+      "stepId": "file-permit",
+      "links": [
+        {
+          "labelKey": "sources.mupWorkTcn",
+          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/work-of-third-country-nationals/281663"
+        },
+        {
+          "labelKey": "sources.mupObrasci",
+          "url": "https://mup.gov.hr/obrasci-281565/281565"
+        }
+      ]
+    },
+    {
+      "id": "start-work",
+      "kind": "stage",
+      "x": 2110,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.startWork.title",
+      "summaryKey": "steps.startWork.summary",
+      "noteKey": "overview.graph.notes.startWork",
+      "stepId": "start-work",
+      "links": [
+        {
+          "labelKey": "sources.mupTempStay",
+          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-third-country-nationals/281661"
+        }
+      ]
+    },
+    {
+      "id": "comply",
+      "kind": "stage",
+      "x": 2370,
+      "y": 224,
+      "w": 200,
+      "h": 100,
+      "titleKey": "steps.comply.title",
+      "summaryKey": "steps.comply.summary",
+      "noteKey": "overview.graph.notes.comply",
+      "stepId": "comply",
+      "links": [
+        {
+          "labelKey": "sources.nn552026",
+          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    { "from": "orient", "to": "occupation" },
+    { "from": "occupation", "to": "employer-package" },
+    { "from": "employer-package", "to": "path-decision" },
+    { "from": "path-decision", "to": "branch-lmt", "branch": "lmt" },
+    { "from": "path-decision", "to": "branch-uv", "branch": "uv" },
+    { "from": "branch-lmt", "to": "join-permit", "branch": "lmt" },
+    { "from": "branch-uv", "to": "join-permit", "branch": "uv" },
+    { "from": "join-permit", "to": "worker-docs" },
+    { "from": "worker-docs", "to": "file-permit" },
+    { "from": "file-permit", "to": "start-work" },
+    { "from": "start-work", "to": "comply" }
+  ]
+}

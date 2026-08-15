@@ -52,4 +52,19 @@ progress.selectedOccupationId = "manual-event-crew";
 g = canMarkStepComplete(steps[3], ctx(progress, { lmt: incomplete }));
 if (!g.ok) throw new Error("LMT step should pass on UV path without lmt guided");
 
+const graph = JSON.parse(readFileSync(new URL("../data/workflow-graph.json", import.meta.url), "utf8"));
+const stepIds = new Set(steps.map((s) => s.id));
+if (!graph.nodes?.length || !graph.edges?.length) throw new Error("workflow graph missing nodes/edges");
+for (const n of graph.nodes) {
+  if (n.stepId && !stepIds.has(n.stepId)) {
+    throw new Error(`workflow graph node ${n.id} has unknown stepId ${n.stepId}`);
+  }
+}
+const nodeIds = new Set(graph.nodes.map((n) => n.id));
+for (const e of graph.edges) {
+  if (!nodeIds.has(e.from) || !nodeIds.has(e.to)) {
+    throw new Error(`workflow graph edge ${e.from} → ${e.to} is dangling`);
+  }
+}
+
 console.log("smoke-gates: OK");

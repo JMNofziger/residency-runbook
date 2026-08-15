@@ -16,7 +16,7 @@ Open http://localhost:8080 (needed for JSON/`fetch`; do not open as `file://`).
 
 ## In the app
 
-- **Workflow overview** home — visual map of the *labor market test* vs *Upravno vijeće* branch and current step; enter the checklist from the hero CTA, top bar, or footer
+- **Workflow overview** home — pannable node graph of stages, the *labor market test* vs *Upravno vijeće* split, and join; click a node for read-only details, then open the checklist step to make changes
 - Eight guided steps from employer fitness through compliance (gates unlock in order; unchecking a required item revokes later completion)
 - **Case picker** — `cases/index.json`; private `cases/private/active.json` first when present; **imported** cases appear in the picker for the session
 - **Export case** / **Import case** — pretty-printed JSON (`kind: residency-runbook-case`, `schemaVersion: 2`). Browser storage is a last-session cache only; one in-app export reminder after the first durable change, plus a browser leave warning if changes remain unsaved
