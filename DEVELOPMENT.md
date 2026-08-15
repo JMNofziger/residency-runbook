@@ -25,7 +25,7 @@ Progress board for the Croatia employer hiring runbook.
 
 ## Current product shape (as of 2026-07-31)
 
-- Lands on **workflow overview**; a read-only node graph shows stage → branch → join; checklist work happens on the step pages
+- Lands on **workflow overview**; expandable node graph shows each stage’s child tasks (from guided checks), blocked edges, and loop-backs; checklist work happens on the step pages
 - **Import** registers the hire in the sidebar for the session and applies imported progress
 - **Export** is the durable artifact; localStorage is cache; nudge once per session + `beforeunload` if still dirty
 - Office drawer carries **Grad Zagreb** desk addresses and a small scope note (not a global chrome banner)

@@ -672,6 +672,7 @@ function renderOverviewMain() {
     progress: state.progress,
     caseData: state.caseData,
     stepIndex: state.stepIndex,
+    panels: GUIDED_PANELS,
   });
 
   document.getElementById("btn-enter-wizard")?.addEventListener("click", () => {
@@ -681,6 +682,7 @@ function renderOverviewMain() {
     steps: state.stepsData.steps,
     progress: state.progress,
     stepIndex: state.stepIndex,
+    panels: GUIDED_PANELS,
     onOpenStep: (index) => {
       if (!canEnterStep(state.stepsData.steps, index, state.progress)) return;
       enterWizardAt(index);

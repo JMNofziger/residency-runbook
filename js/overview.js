@@ -2,7 +2,7 @@
 
 import { I18n } from "./i18n.js";
 import { Uncertainty } from "./uncertainty.js";
-import { renderWorkflowGraph, bindWorkflowGraph } from "./workflow-graph.js";
+import { renderWorkflowGraph, bindWorkflowGraph, countOpenSubtasks } from "./workflow-graph.js";
 
 function esc(s) {
   return String(s ?? "")
@@ -18,8 +18,9 @@ function esc(s) {
  * @param {object} opts.progress
  * @param {object} opts.caseData
  * @param {number} opts.stepIndex
+ * @param {object} opts.panels
  */
-export function renderWorkflowOverview({ steps, progress, caseData, stepIndex }) {
+export function renderWorkflowOverview({ steps, progress, caseData, stepIndex, panels }) {
   const completed = new Set(progress.completedStepIds || []);
   const path = progress.occupationPath || "labor_market_test";
   const uv = progress.uvCandidate;
@@ -28,6 +29,7 @@ export function renderWorkflowOverview({ steps, progress, caseData, stepIndex })
   const isUv = path === "uv_skip_candidate";
   const doneCount = completed.size;
   const total = steps.length;
+  const sub = countOpenSubtasks({ steps, progress, stepIndex, panels });
 
   const branchLabel = isUv
     ? I18n.th("overview.branchUv", { title: uv?.title || "—" })
@@ -57,6 +59,10 @@ export function renderWorkflowOverview({ steps, progress, caseData, stepIndex })
             <dt>${esc(I18n.t("overview.branchLabel"))}</dt>
             <dd>${branchLabel}</dd>
           </div>
+          <div>
+            <dt>${esc(I18n.t("overview.subtasksLabel"))}</dt>
+            <dd>${esc(I18n.t("overview.subtasksOpen", { open: sub.open, total: sub.total }))}</dd>
+          </div>
         </dl>
         <div class="overview-cta-row">
           <button type="button" class="btn primary" id="btn-enter-wizard">
@@ -69,7 +75,7 @@ export function renderWorkflowOverview({ steps, progress, caseData, stepIndex })
         </div>
       </div>
 
-      ${renderWorkflowGraph({ steps, progress, stepIndex })}
+      ${renderWorkflowGraph({ steps, progress, stepIndex, panels })}
 
       <div class="flow-legend">
         <span class="leg is-done">${esc(I18n.t("overview.status.done"))}</span>
@@ -78,6 +84,7 @@ export function renderWorkflowOverview({ steps, progress, caseData, stepIndex })
         <span class="leg is-upcoming">${esc(I18n.t("overview.status.upcoming"))}</span>
         <span class="leg is-unresolved">${esc(I18n.t("overview.graph.status.unresolved"))}</span>
         <span class="leg is-inactive">${esc(I18n.t("overview.graph.status.inactive"))}</span>
+        <span class="leg is-loop">${esc(I18n.t("overview.graph.kind.loop"))}</span>
       </div>
 
       ${Uncertainty.renderOverview()}
