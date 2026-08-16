@@ -113,7 +113,8 @@
     "unemploymentLongHoldQualifier": "Dozvola držana najmanje ovoliko za duži prozor nezaposlenosti",
     "a1LanguageWithin": "Ispit A1.1 hrvatskog + latinice nakon najmanje ovoliko boravka (za produženje kad je na snazi)",
     "a1DeferredForce": "Odgođeno stupanje na snagu obveze iz čl. 92.a st. 1./4./6. (NN 55/2026)",
-    "longTermFee": "Administrativna pristojba za rješenje o dugotrajnom / stalnom boravku"
+    "longTermFee": "Administrativna pristojba za rješenje o dugotrajnom / stalnom boravku",
+    "tempStayAddressDeadline": "Rok prijave boravišta / adrese na privremenom boravku (od ulaska ili od promjene; Obrazac 16a)"
   },
   "case": {
     "occupation": {
@@ -130,6 +131,7 @@
     "mupStayWork": "MUP — Boravak i rad (središte)",
     "mupWorkTcn": "MUP — Rad državljana trećih zemalja",
     "mupTempStay": "MUP — Privremeni boravak državljana trećih zemalja",
+    "mupAddressProcedure": "MUP — Postupak prijave adrese za strance",
     "mupBlueCard": "MUP — Visokokvalificirani DTZ (EU Blue Card)",
     "mupLongTerm": "MUP — Dugotrajni boravak i stalni boravak",
     "mupRadneDozvole": "MUP — Radne dozvole (izuzeci / deficitarna lista)",
@@ -1011,13 +1013,14 @@
     },
     "address": {
       "title": "Prijavite adresu privremenog boravišta",
-      "why": "Neprijavljivanje privremenog boravišta kod nadležne policije može ugroziti dozvolu prema MUP pravilima privremenog boravka.",
+      "why": "Državljanin treće zemlje na privremenom boravku mora prijaviti boravište (i kasnije promjene adrese) kod nadležne policijske uprave. Citirani rok teče od ulaska u Hrvatsku ili od dana promjene. To nije isti rok kao samoprijava kratkotrajnog smještaja (hotel/eVisitor).",
       "how": {
-        "mup": "Pročitajte obvezu prijave privremenog boravišta na MUP stranici o privremenom boravku.",
-        "desk": "Prijavite na nadležnom zagrebačkom šalteru za stvarnu adresu.",
-        "verify": "Potvrdite živi tekst roka na MUP-u prije unošenja u kalendar — ovdje ne izmišljamo broj dana."
+        "mup": "Pročitajte MUP postupak prijave ili promjene adrese stranca (Obrazac 16a).",
+        "desk": "Prijavite na nadležnom zagrebačkom šalteru za stvarnu adresu, s Obrascom 16a i dokazom smještaja.",
+        "verify": "Unesite citirani rok ({deadline}) u zajednički kalendar od ulaska ili od promjene adrese, zatim ponovno provjerite živu MUP stranicu postupka prije nego datum tretirate kao konačan."
       },
-      "evidence": "Potvrda / pečat prijave privremenog boravišta radnika."
+      "evidence": "Potvrda / pečat prijave privremenog boravišta radnika (Obrazac 16a).",
+      "caseHint": "Ne miješajte ovaj rok prijave boravišta nakon dozvole sa samoprijavom kratkotrajnog boravka u nacionalnom panelu. Stalni/dugotrajni boravak ima drugi MUP rok i nije ovaj put."
     },
     "hzmo": {
       "title": "Prijavite zaposlenje u HZMO (mirovina)",

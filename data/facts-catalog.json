@@ -3,9 +3,18 @@
   "notes": [
     "Canonical shared fees/deadlines. Reference by id string in facts[] arrays elsewhere.",
     "Contested alternate readings stay in data/uncertainty.json — do not put them here.",
-    "Stay-and-work path admin fee is €74.32 (MUP Work of TCN). €46.45 on the temporary-stay page is a different purpose — see artifacts/phase6e-verification.md."
+    "Stay-and-work path admin fee is €74.32 (MUP Work of TCN). €46.45 on the temporary-stay page is a different purpose — see artifacts/phase6e-verification.md.",
+    "Temporary-stay boravište / address registration (3 days) is not the same clock as short-stay eVisitor self-registration (2 days if the provider cannot register)."
   ],
   "facts": {
+    "temp-stay-address-deadline": {
+      "value": "3 days",
+      "labelKey": "facts.tempStayAddressDeadline",
+      "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+      "sourceTier": 1,
+      "sourceName": "MUP — Address registration procedure (foreigners)",
+      "verifiedDate": "2026-08-15"
+    },
     "permit-admin-fee": {
       "value": "€74.32",
       "labelKey": "facts.permitFee",

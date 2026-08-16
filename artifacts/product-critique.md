@@ -29,7 +29,7 @@ Architecture and citation machinery are strong for a static runbook. Phase 6 del
 |---|---|---|
 | Fee history (€46.45 vs €74.32) | High (mitigated) | Path fee is €74.32 (MUP Work of TCN). Temporary-stay page still lists €46.45 for other purposes. Audit notes historically led with €46.45 and invited reintroduction of the bug. Regenerated notes must keep the Phase 6e distinction loud. |
 | Duplicated fee facts | Medium | Same €74.32 / biometric amounts live in `steps.json`, `file-permit-checks.json`, and `start-work-checks.json`. Next fee change is a multi-file footgun — needs a canonical fact catalog. |
-| Post-permit address deadline | Medium | Step 7 `register-address` correctly refuses to invent a day-count, but employers still need a calendar number. Entry self-registration “2 days” (US pack / MVEP) is a different duty and easy to conflate. |
+| Post-permit address deadline | Medium (closed 2026-08-15) | Catalog `temp-stay-address-deadline` cites MUP procedure: TCN on temporary stay registers boravište / address within **3 days** of entry or change (Form 16a). US-pack short-stay self-registration remains **2 days** and is labeled as a different duty. |
 | Appointment check soft | Low–medium | Evidence can be “booking **or** walk-in note” — honest uncertainty, weak readiness signal. |
 | UV list edition `2023-03` | Medium | Stale banner is honest; still a filing risk if a newer UV decision exists but is unpublished as PDF. |
 | Assertive non-numeric copy | Low | “Wrong desk wastes the visit,” “like any other employee” — process guidance without fact objects; fine if clearly operational, risky if read as law. |
@@ -79,7 +79,7 @@ Architecture and citation machinery are strong for a static runbook. Phase 6 del
 4. **Anonymized / progress-only export**.  
 5. **EN/HR key-parity script in CI**.  
 6. **Hosting** — static host + custom domain; keep lint in CI (workflow added).  
-7. **Cite or formally omit** post-permit address registration day-count with `omittedReason`.  
+7. **Cite or formally omit** post-permit address registration day-count with `omittedReason`. ✅ cited 2026-08-15 (`temp-stay-address-deadline`).  
 8. **Non-Zagreb competence** — only when a real second city case exists; don’t fake a matrix.  
 9. **Split `app.js`** — `render-step.js`, `case-session.js`.  
 10. **Progress migration** for renamed check ids on import.
@@ -120,16 +120,17 @@ Update against the critique above after follow-on shipping. Historical sections 
 | Zagreb scope placement | Small note in office panes (global banner removed) |
 | Offices addresses for Grad Zagreb case | `data/offices.json` (HZZ Zvonimira 15, PU Remetinečki gaj 13 / Petrinjska 30, etc.) |
 | UI polish | Sun/moon theme; footer reset + `_{date}_BAK` backup; offices close; full italic term names for labor market test / Upravno vijeće list |
+| Post-permit address day-count | Catalog `temp-stay-address-deadline` (MUP Form 16a procedure, verified 2026-08-15); Step 7 + US pack distinguish 3-day boravište vs 2-day short-stay self-reg |
 
 ### Still open (prioritized)
 
-1. More nationality packs (RES-8) — embassy offices from pack, not core steps  
-2. Anonymized / redacted export  
-3. Hosting (RES-11)  
+1. Hosting (RES-11) — Pages workflow is `workflow_dispatch` only until repo Pages is enabled  
+2. More nationality packs (RES-8) — embassy offices from pack, not core steps  
+3. Anonymized / redacted export  
 4. Optional nationality checklist gate / banner on worker-docs  
-5. Cite or omit post-permit address day-count  
-6. Non-Zagreb competence only with a real second-city case  
-7. Split `app.js`; progress migration for renamed check ids  
+5. Non-Zagreb competence only with a real second-city case  
+6. Split `app.js`; progress migration for renamed check ids  
+7. Expand catalog beyond shared fees (RES-19)  
 
 ### Product framing (unchanged)
 

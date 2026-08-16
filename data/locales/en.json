@@ -113,7 +113,8 @@
     "unemploymentLongHoldQualifier": "Permit held at least this long for longer unemployment window",
     "a1LanguageWithin": "A1.1 Croatian + Latin script exam after at least this much stay (required for extension when in force)",
     "a1DeferredForce": "Deferred force date for Aliens Act Art. 92.a(1)/(4)/(6) language obligation (NN 55/2026)",
-    "longTermFee": "Long-term / permanent stay decision administrative fee"
+    "longTermFee": "Long-term / permanent stay decision administrative fee",
+    "tempStayAddressDeadline": "Temporary-stay boravište / address registration deadline (from entry or change; Form 16a)"
   },
   "case": {
     "occupation": {
@@ -130,6 +131,7 @@
     "mupStayWork": "MUP — Stay and work (hub)",
     "mupWorkTcn": "MUP — Work of third-country nationals",
     "mupTempStay": "MUP — Temporary stay of third-country nationals",
+    "mupAddressProcedure": "MUP — Address registration procedure (foreigners)",
     "mupBlueCard": "MUP — Highly-qualified TCNs (EU Blue Card)",
     "mupLongTerm": "MUP — Long-term residence and permanent stay",
     "mupRadneDozvole": "MUP — Radne dozvole (exemptions / deficitary list)",
@@ -1011,13 +1013,14 @@
     },
     "address": {
       "title": "Register temporary residence address",
-      "why": "Failing to register temporary residence with the competent police administration can put the permit at risk under MUP temporary-stay rules.",
+      "why": "A third-country national on temporary stay must register boravište (and later address changes) with the competent police administration. The cited deadline runs from entry into Croatia or from the change. This is not the same clock as short-stay hotel/eVisitor self-registration.",
       "how": {
-        "mup": "Read the temporary-residence registration duty on the MUP temporary-stay page.",
-        "desk": "Register at the competent Zagreb police desk for the actual address.",
-        "verify": "Confirm the live deadline wording on MUP before you calendar it — do not invent a day-count here."
+        "mup": "Read the MUP procedure for registering or changing a foreigner’s address (Form 16a).",
+        "desk": "Register at the competent Zagreb police desk for the actual address, with Form 16a and housing proof.",
+        "verify": "Put the cited deadline ({deadline}) on a shared calendar from entry or from a change of address, then re-check the live MUP procedure page before treating the date as final."
       },
-      "evidence": "Registration confirmation / stamp for the worker’s temporary address."
+      "evidence": "Registration confirmation / stamp for the worker’s temporary address (Form 16a).",
+      "caseHint": "Do not mix this post-permit boravište clock with short-stay self-registration in the nationality panel. Permanent/long-term stay uses a different MUP deadline and is not this path."
     },
     "hzmo": {
       "title": "Register employment with HZMO (pension)",

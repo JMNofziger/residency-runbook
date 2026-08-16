@@ -95,14 +95,14 @@
       "howSteps": [
         {
           "labelKey": "swGuide.address.how.mup",
-          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/temporary-stay-of-third-country-nationals/281661"
+          "url": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913"
         },
         { "labelKey": "swGuide.address.how.desk" },
         { "labelKey": "swGuide.address.how.verify" }
       ],
       "evidenceKey": "swGuide.address.evidence",
-      "facts": [],
-      "caseHintKeys": []
+      "facts": ["temp-stay-address-deadline"],
+      "caseHintKeys": ["swGuide.address.caseHint"]
     },
     {
       "id": "hzmo",
