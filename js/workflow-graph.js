@@ -12,15 +12,15 @@ let camera = { x: 0, y: 0, scale: 1, userMoved: false };
 const LAYOUT = {
   startX: 36,
   startY: 28,
-  gapX: 44,
-  splitGapY: 32,
-  headerH: 80,
-  pad: 10,
-  childH: 54,
-  childGap: 8,
+  gapX: 52,
+  splitGapY: 44,
+  headerH: 122,
+  pad: 12,
+  childH: 64,
+  childGap: 10,
   cols: 2,
-  minW: 304,
-  loopLane: 92,
+  minW: 348,
+  loopLane: 100,
 };
 
 function esc(s) {
@@ -361,17 +361,21 @@ function renderStage(node, ctx) {
       style="left:${node.x}px;top:${node.y}px;width:${node.w}px;height:${node.h}px"
       data-graph-node="${escAttr(node.id)}">
       <div class="graph-stage-head">
-        <button type="button" class="graph-node-hit" data-graph-select="${escAttr(node.id)}" aria-pressed="${selectedId === node.id}">
+        <div class="graph-stage-top">
           <span class="graph-node-kind">${esc(kind)}</span>
+          ${
+            canExpand
+              ? `<button type="button" class="graph-expand" data-graph-expand="${escAttr(node.id)}" aria-expanded="${node.expanded}" title="${escAttr(I18n.t(node.expanded ? "overview.graph.collapse" : "overview.graph.expand"))}">${chev}</button>`
+              : ""
+          }
+        </div>
+        <button type="button" class="graph-node-hit" data-graph-select="${escAttr(node.id)}" aria-pressed="${selectedId === node.id}">
           <span class="graph-node-title">${esc(title)}</span>
-          <span class="graph-node-status">${esc(count)}</span>
-          ${block}
+          <span class="graph-node-meta">
+            <span class="graph-node-status">${esc(count)}</span>
+            ${block}
+          </span>
         </button>
-        ${
-          canExpand
-            ? `<button type="button" class="graph-expand" data-graph-expand="${escAttr(node.id)}" aria-expanded="${node.expanded}" title="${escAttr(I18n.t(node.expanded ? "overview.graph.collapse" : "overview.graph.expand"))}">${chev}</button>`
-            : ""
-        }
       </div>
       ${node.expanded ? `<div class="graph-child-grid">${tasks}</div>` : ""}
     </article>`;

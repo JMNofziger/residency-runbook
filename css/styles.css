@@ -1234,18 +1234,33 @@ a:hover {
 }
 
 .graph-stage-head {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: stretch;
-  min-height: 80px;
+  flex: 0 0 122px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.2rem;
+  height: 122px;
+  min-height: 122px;
+  max-height: 122px;
+  padding: 0.55rem 0.6rem 0.5rem 0.85rem;
+  box-sizing: border-box;
+}
+
+.graph-stage-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  min-height: 1.5rem;
 }
 
 .graph-node-hit {
   display: grid;
-  align-content: center;
-  gap: 0.12rem;
+  align-content: start;
+  gap: 0.28rem;
   width: 100%;
-  padding: 0.65rem 0.7rem 0.65rem 0.85rem;
+  min-width: 0;
+  padding: 0;
   border: 0;
   background: transparent;
   color: inherit;
@@ -1255,40 +1270,57 @@ a:hover {
 }
 
 .graph-expand {
-  width: 2rem;
-  margin: 0.55rem 0.45rem 0.55rem 0;
+  flex: 0 0 1.85rem;
+  width: 1.85rem;
+  height: 1.85rem;
+  margin: 0;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg-elev);
   color: var(--muted);
   font: inherit;
+  line-height: 1;
   cursor: pointer;
 }
 
+.graph-node-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.45rem;
+  min-width: 0;
+}
+
 .graph-block-pill {
-  display: inline-block;
-  margin-top: 0.2rem;
-  padding: 0.05rem 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  max-width: 100%;
+  padding: 0.12rem 0.5rem;
   border-radius: 999px;
   background: color-mix(in srgb, var(--accent) 18%, transparent);
   color: var(--accent);
   font-size: 0.68rem;
   font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .graph-child-grid {
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 0 10px 10px;
+  gap: 10px;
+  padding: 0 12px 12px;
 }
 
 .graph-task {
   display: grid;
   align-content: center;
-  gap: 0.05rem;
-  min-height: 54px;
-  padding: 0.35rem 0.45rem;
+  gap: 0.12rem;
+  min-height: 64px;
+  min-width: 0;
+  padding: 0.4rem 0.5rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--bg-elev);
@@ -1334,8 +1366,8 @@ a:hover {
 .graph-loop-hit {
   position: absolute;
   z-index: 3;
-  max-width: 180px;
-  padding: 0.2rem 0.5rem;
+  max-width: 220px;
+  padding: 0.25rem 0.6rem;
   border: 1px dashed color-mix(in srgb, var(--accent) 55%, var(--border));
   border-radius: 999px;
   background: var(--bg-elev);
@@ -1343,6 +1375,8 @@ a:hover {
   font: inherit;
   font-size: 0.68rem;
   font-weight: 550;
+  line-height: 1.25;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -1358,21 +1392,6 @@ a:hover {
   font-size: 0.86rem;
 }
 
-.graph-node-hit {
-  display: grid;
-  align-content: center;
-  gap: 0.12rem;
-  width: 100%;
-  padding: 0.7rem 0.75rem 0.7rem 0.9rem;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 16px 0 0 16px;
-}
-
 .graph-node-kind {
   font-size: 0.64rem;
   font-weight: 650;
@@ -1385,11 +1404,18 @@ a:hover {
   font-weight: 650;
   font-size: 0.92rem;
   line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .graph-node-status {
   font-size: 0.75rem;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .graph-node-info {
@@ -1427,8 +1453,7 @@ a:hover {
 }
 
 .graph-node.is-join .graph-node-hit {
-  border-radius: 999px 0 0 999px;
-  padding-left: 1.05rem;
+  padding-left: 0;
 }
 
 .graph-node.is-done {
