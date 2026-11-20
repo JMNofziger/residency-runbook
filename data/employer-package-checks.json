@@ -24,7 +24,7 @@
         },
         {
           "labelKey": "pkg.contract.how.hzzTips",
-          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/savjeti-za-predaju-zahtjeva/"
+          "url": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/?tab=podnosenje_zahtjeva"
         }
       ],
       "evidenceKey": "pkg.contract.evidence",
@@ -60,11 +60,11 @@
       "howSteps": [
         {
           "labelKey": "pkg.form17a.how.nn",
-          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html"
+          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html"
         },
         {
           "labelKey": "pkg.form17a.how.mup",
-          "url": "https://mup.gov.hr/aliens-281621/stay-and-work/work-of-third-country-nationals/281663"
+          "url": "https://mup.gov.hr/UserDocsImages/stranci/2026/novi%20obrasci%20-%20travanj%202026/Obrazac%2017a-travanj%202026.pdf"
         },
         {
           "labelKey": "pkg.form17a.how.verifyCurrent"
@@ -85,15 +85,52 @@
         },
         {
           "labelKey": "pkg.housing.how.nn",
-          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html"
+          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html"
         },
         {
           "labelKey": "pkg.housing.how.document"
         }
       ],
       "evidenceKey": "pkg.housing.evidence",
-      "facts": [],
-      "caseHintKeys": []
+      "facts": [
+        {
+          "id": "pkg-housing-min-area",
+          "value": "14 m²",
+          "labelKey": "facts.housingMinArea",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(4)",
+          "verifiedDate": "2026-11-20"
+        },
+        {
+          "id": "pkg-housing-extra-area",
+          "value": "6 m²",
+          "labelKey": "facts.housingExtraArea",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(4)",
+          "verifiedDate": "2026-11-20"
+        },
+        {
+          "id": "pkg-housing-max-apartment",
+          "value": "8",
+          "labelKey": "facts.housingMaxInApartment",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(5)",
+          "verifiedDate": "2026-11-20"
+        },
+        {
+          "id": "pkg-housing-rent-cap",
+          "value": "30%",
+          "labelKey": "facts.housingRentCap",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 49(1)",
+          "verifiedDate": "2026-11-20"
+        }
+      ],
+      "caseHintKeys": ["pkg.housing.caseHint"]
     },
     {
       "id": "tax-contribution-clear",

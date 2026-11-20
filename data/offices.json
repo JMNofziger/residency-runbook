@@ -8,7 +8,7 @@
       "sort": "HZZ",
       "nameKey": "offices.hzz.name",
       "roleKey": "offices.hzz.role",
-      "stepIds": ["orient", "occupation", "employer-package", "lmt"],
+      "stepIds": ["orient", "occupation", "employer-package", "lmt", "file-permit"],
       "website": "https://www.hzz.hr/usluge/radne-dozvole-za-zaposljavanje-stranaca-i-test-trzista-rada/novi-sustav-zaposljavanja-stranaca/",
       "hubLabelKey": "offices.hzz.hubLabel",
       "address": "Područna služba Zagreb — Ulica kralja Zvonimira 15, 10000 Zagreb (case-relevant regional office for Grad Zagreb filings)",

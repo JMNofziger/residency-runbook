@@ -30,7 +30,7 @@ Progress board for the Croatia employer hiring runbook.
 | 8b | EN/HR locale parity CI + fee uncertainty cards + workflow overview | 🟢 | Linear RES-13, RES-18 |
 | UX | Offices addresses, theme icon, footer reset+backup, import activation, one-shot export nudge | 🟢 | Linear RES-20 |
 | UX | Overview node graph (pan/zoom, inspector, gating child tasks, loop-backs) | 🟢 | PRs #5 / #6 |
-| Trust | Post-permit address day-count (temp-stay boravište vs short-stay self-reg) | 🟢 | Linear RES-7 — MUP procedure, Form 16a, catalog `temp-stay-address-deadline` |
+| Trust | Post-permit address day-count (statute vs stale MUP page; distinct from short-stay self-reg) | 🟢 | Linear RES-7 — catalog `temp-stay-address-deadline` now follows NN 55/2026 Art. 51; MUP page kept as a conflicting reading |
 | 8 | Static hosting + custom domain | 🟡 | Linear RES-11 — **next**. Workflow is in repo (`workflow_dispatch`); Pages + domain still need repo settings |
 | 7 | Nationality discovery spike (no invented packs) | 🔴 | Linear RES-8 — parked until product picks the next market |
 | Trust | Expand catalog beyond shared fees/deadlines | 🟡 | Linear RES-19 — after hosting, migrate duplicated one-offs |
@@ -48,14 +48,15 @@ Progress board for the Croatia employer hiring runbook.
 2. **RES-12 or RES-14** if hosting waits on credentials — redacted export (agencies email case files) or split `app.js` (no behavior change).
 3. **Do not** invent nationality packs (RES-8) or a non-Zagreb office matrix (RES-15).
 
-## Current product shape (as of 2026-08-15)
+## Current product shape (as of 2026-11-20)
 
 - Lands on **workflow overview**; expandable node graph shows each stage’s child tasks (from guided checks), blocked edges, and loop-backs; checklist work happens on the step pages
 - **Import** registers the hire in the sidebar for the session and applies imported progress
 - **Export** is the durable artifact; localStorage is cache; nudge once per session + `beforeunload` if still dirty
-- Office drawer carries **Grad Zagreb** desk addresses and a small scope note (not a global chrome banner)
+- Office drawer carries **PU zagrebačka** (city and county) addresses and a small scope note (not a global chrome banner)
+- A new labor-market or deficit-list stay-and-work filing goes to the HZZ portal. Form 2a stays the police/email exception
 - UI prefers full italicized names for *labor market test* and *Upravno vijeće deficitary occupations list* over LMT/UV shorthand
-- Step 7 `register-address` cites the MUP **3-day** temporary-stay boravište / address clock (Form 16a). US-pack short-stay self-registration remains a **different** **2-day** duty.
+- Step 7 `register-address` cites the statute **15-day** temporary-stay boravište clock (Form 16a). The MUP procedure page still prints **3 days** and is an uncertainty card. US-pack short-stay self-registration remains a **different** **2-day** duty.
 
 ## Known gaps
 

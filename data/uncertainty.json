@@ -2,6 +2,40 @@
   "version": 1,
   "items": [
     {
+      "id": "address-registration-deadline",
+      "titleKey": "uncertainty.addressDeadline.title",
+      "summaryKey": "uncertainty.addressDeadline.summary",
+      "spectrumKey": "uncertainty.addressDeadline.spectrum",
+      "resolvedForPath": true,
+      "adoptedLabelKey": "facts.tempStayAddressDeadline",
+      "stepIds": ["start-work"],
+      "showOnOverview": true,
+      "readings": [
+        {
+          "id": "statute-15",
+          "value": "15 days",
+          "roleKey": "uncertainty.role.adopted",
+          "meaningKey": "uncertainty.addressDeadline.meaning15",
+          "sourceName": "Narodne novine — NN 55/2026, Art. 51",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+          "sourceTier": 1,
+          "pageUpdatedNoteKey": "uncertainty.addressDeadline.pageNoteStatute",
+          "verifiedDate": "2026-11-20"
+        },
+        {
+          "id": "mup-procedure-3",
+          "value": "3 days",
+          "roleKey": "uncertainty.role.conflicting",
+          "meaningKey": "uncertainty.addressDeadline.meaning3",
+          "sourceName": "MUP — Address registration procedure (foreigners)",
+          "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+          "sourceTier": 1,
+          "pageUpdatedNoteKey": "uncertainty.addressDeadline.pageNoteMup",
+          "verifiedDate": "2026-11-20"
+        }
+      ]
+    },
+    {
       "id": "stay-work-admin-fee",
       "titleKey": "uncertainty.stayWorkFee.title",
       "summaryKey": "uncertainty.stayWorkFee.summary",

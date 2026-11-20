@@ -109,13 +109,15 @@
       "whyKey": "fpGuide.appointment.why",
       "howSteps": [
         {
-          "labelKey": "fpGuide.appointment.how.askPu"
+          "labelKey": "fpGuide.appointment.how.askPu",
+          "url": "https://mup.gov.hr/radne-dozvole/286764"
         },
         {
           "labelKey": "fpGuide.appointment.how.noInvent"
         },
         {
-          "labelKey": "fpGuide.appointment.how.notEmail"
+          "labelKey": "fpGuide.appointment.how.notEmail",
+          "url": "https://mup.gov.hr/UserDocsImages/2026/11/UPUTA%20ZA%20ELEKTRONI%C4%8CKO%20PODNO%C5%A0ENJE%20ZAHTJEVA%20ZA%20DOZVOLE%20ZA%20BORAVAK%20I%20RAD%20DR%C5%BDAVLJANA%20TRE%C4%86IH%20ZEMALJA-studeni%202026.pdf"
         }
       ],
       "evidenceKey": "fpGuide.appointment.evidence",

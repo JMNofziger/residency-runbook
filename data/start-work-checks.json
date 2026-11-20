@@ -32,6 +32,15 @@
           "sourceTier": 1,
           "sourceName": "Narodne novine — NN 55/2026",
           "verifiedDate": "2026-07-31"
+        },
+        {
+          "id": "sw-permit-decision-extension",
+          "value": "30 days",
+          "labelKey": "facts.permitDecisionExtension",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 55/2026, Aliens Act Art. 91(9)",
+          "verifiedDate": "2026-11-20"
         }
       ],
       "caseHintKeys": []
@@ -97,7 +106,10 @@
           "labelKey": "swGuide.address.how.mup",
           "url": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913"
         },
-        { "labelKey": "swGuide.address.how.desk" },
+        {
+          "labelKey": "swGuide.address.how.desk",
+          "url": "https://zagrebacka-policija.gov.hr/vijesti/kako-i-gdje-rijesiti-upravne-poslove-od-1-rujna-2025/101594"
+        },
         { "labelKey": "swGuide.address.how.verify" }
       ],
       "evidenceKey": "swGuide.address.evidence",

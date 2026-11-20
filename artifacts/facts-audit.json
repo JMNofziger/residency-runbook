@@ -1,21 +1,25 @@
 {
-  "generatedAt": "2026-08-15",
+  "generatedAt": "2026-11-20",
   "caseId": "example-dool-us-manual-labor",
-  "factCount": 54,
-  "tier1Count": 54,
+  "factCount": 62,
+  "tier1Count": 62,
   "tier2Count": 0,
   "notes": [
     "Canonical shared fees live in data/facts-catalog.json; steps/checks reference by id. Contested €46.45 / accelerated biometric readings stay in data/uncertainty.json only.",
     "Phase 5 live Tier-1 pass completed 2026-07-31 — see artifacts/phase5-verification.md.",
     "CONFIRMED on HZZ novi sustav: Art. 99 20%/10%, 12 months continuous FTE, €100,000 legal-entity inflow, 30-day blockade, 90-day LMT positive-notice window.",
-    "CONFIRMED on MUP Work of third-country nationals (Phase 6e): stay-and-work / Single Permit administrative fee is €74.32 when notified of approval (police filing). Biometric production €31.85 (regular) + admin €9.29. Accelerated biometric production (€59.73) omitted from wizard defaults.",
+    "CONFIRMED on MUP Work of third-country nationals (Phase 6e): stay-and-work / Single Permit administrative fee is €74.32 when notified of approval. Biometric production €31.85 (regular) + admin €9.29. Accelerated biometric production (€59.73) omitted from wizard defaults. November 2026: a new labor-market or deficit-list filing is submitted on the HZZ portal, not at the police counter.",
     "NOTE: MUP temporary-stay page also lists €46.45 — that is the generic temporary-stay administrative fee for other purposes, NOT the stay-and-work path fee used in this runbook. See artifacts/phase6e-verification.md.",
     "CONFIRMED on MUP long-term page: €83.62 decision fee.",
     "CONFIRMED on NN 55/2026: general force 2026-06-04; 90-day decision deadline; employer-change after 6 months; unemployment 3/6 months with 2-year qualifier; A1.1 after 1 year stay; Art. 92.a(1)/(4)/(6) deferred to 2027-06-04.",
     "CONFIRMED on MVEP granting-stay page: short-stay 90/180; alien self-registration within 2 days if provider cannot register (provider: 1 day via eVisitor).",
-    "CONFIRMED on MUP address-registration procedure page (2026-08-15): TCN on temporary stay must register boravište / address (and changes) within 3 days of entry or of the change (Form 16a). Distinct from short-stay eVisitor self-registration.",
+    "ADOPTED 2026-11-20 from NN 55/2026 Art. 51 (in force 2026-06-04): temporary-stay boravište deadline is 15 days from entry or change (Art. 178(1)). The MUP procedure page still printed 3 days on 2026-11-20 — conflicting reading in data/uncertainty.json. Distinct from short-stay eVisitor self-registration. Zagreb how-and-where page receives the post-permit registration by email PDF, not as a required counter visit.",
     "UV list: no newer public UV decision PDF found; still shipping official 2023-03 MUP/HZZ PDF with stale-edition banner.",
-    "OMITTED: Blue Card validity months (not stated on live MUP Blue Card page / not confirmed in NN 55/2026 excerpt); Blue Card fee schedule (wrong path); seasonal/student numerics; Form 17a field specs.",
+    "CONFIRMED 2026-11-20 on NN 43/2026 residence ordinance: Form 17a is the housing declaration. Cited figures: 14 m² + 6 m², max 8 TCNs in one apartment, rent at most 30% of net pay. The PDF does not ask for square metres. Notarization of Form 17a is not required.",
+    "CONFIRMED 2026-11-20 on HZZ filing FAQ: employment contract signed by both parties; pre-contract and letter of intent rejected.",
+    "CONFIRMED 2026-11-20 on NN 55/2026: exceptional non-seasonal decision window may be extended by 30 days with notice (Art. 91(9)); natural-person Art. 99 inflow threshold €40,000 (legal entity remains €100,000); work limited to police administrations written on the certificate. Euro fine range for out-of-area work was not restated in the amendment text opened, so it is not a wizard fact.",
+    "NOT ADOPTED: start of work on the employer certificate before a positive decision (old Art. 91 paragraph text not retrieved after renumbering). HZZ 15-day answer, Art. 100.a caps, zadužnica amount, minimum wage, and 16.5% health contribution were not re-verified from a page opened in this pass. Form 18a is not a US-citizen requirement on this path.",
+    "OMITTED: Blue Card validity months (not stated on live MUP Blue Card page / not confirmed in NN 55/2026 excerpt); Blue Card fee schedule (wrong path); seasonal/student numerics.",
     "Case revenue remains case data, not a legal fact — still needs live tax/bank verification before filing."
   ],
   "facts": [
@@ -78,6 +82,18 @@
       "ageDaysAsOfAudit": 15,
       "file": "data/art99-checks.json",
       "path": "checks[4].facts[0]"
+    },
+    {
+      "id": "art99-check-inflow-natural",
+      "value": "€40,000",
+      "labelKey": "facts.art99InflowNaturalPerson",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 55/2026, Aliens Act Art. 99(1)(7)(b)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/art99-checks.json",
+      "path": "checks[4].facts[1]"
     },
     {
       "id": "art99-check-ratio-10",
@@ -149,7 +165,7 @@
       "verifiedDate": "2026-07-31",
       "ageDaysAsOfAudit": 15,
       "file": "data/uncertainty.json",
-      "path": "items[1].readings[1]"
+      "path": "items[2].readings[1]"
     },
     {
       "id": "biometric-admin-fee",
@@ -257,7 +273,7 @@
       "verifiedDate": "2026-07-31",
       "ageDaysAsOfAudit": 15,
       "file": "data/uncertainty.json",
-      "path": "items[1].readings[0]"
+      "path": "items[2].readings[0]"
     },
     {
       "id": "case-art99-blocked",
@@ -440,6 +456,18 @@
       "path": "checks[5].facts[0]"
     },
     {
+      "id": "mup-procedure-3",
+      "value": "3 days",
+      "labelKey": null,
+      "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+      "sourceTier": 1,
+      "sourceName": "MUP — Address registration procedure (foreigners)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/uncertainty.json",
+      "path": "items[0].readings[1]"
+    },
+    {
       "id": "nn552026-in-force",
       "value": "2026-06-04",
       "labelKey": "facts.nn552026InForce",
@@ -536,6 +564,54 @@
       "path": "checks[4].facts[0]"
     },
     {
+      "id": "pkg-housing-extra-area",
+      "value": "6 m²",
+      "labelKey": "facts.housingExtraArea",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(4)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/employer-package-checks.json",
+      "path": "checks[3].facts[1]"
+    },
+    {
+      "id": "pkg-housing-max-apartment",
+      "value": "8",
+      "labelKey": "facts.housingMaxInApartment",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(5)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/employer-package-checks.json",
+      "path": "checks[3].facts[2]"
+    },
+    {
+      "id": "pkg-housing-min-area",
+      "value": "14 m²",
+      "labelKey": "facts.housingMinArea",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 48(4)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/employer-package-checks.json",
+      "path": "checks[3].facts[0]"
+    },
+    {
+      "id": "pkg-housing-rent-cap",
+      "value": "30%",
+      "labelKey": "facts.housingRentCap",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2026_04_43_511.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 43/2026, residence ordinance Art. 49(1)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/employer-package-checks.json",
+      "path": "checks[3].facts[3]"
+    },
+    {
       "id": "pkg-inflow-handoff",
       "value": "€100,000",
       "labelKey": "facts.art99InflowThreshold",
@@ -546,6 +622,30 @@
       "ageDaysAsOfAudit": 15,
       "file": "data/employer-package-checks.json",
       "path": "checks[5].facts[0]"
+    },
+    {
+      "id": "statute-15",
+      "value": "15 days",
+      "labelKey": null,
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 55/2026, Art. 51",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/uncertainty.json",
+      "path": "items[0].readings[0]"
+    },
+    {
+      "id": "sw-permit-decision-extension",
+      "value": "30 days",
+      "labelKey": "facts.permitDecisionExtension",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+      "sourceTier": 1,
+      "sourceName": "Narodne novine — NN 55/2026, Aliens Act Art. 91(9)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
+      "file": "data/start-work-checks.json",
+      "path": "checks[0].facts[1]"
     },
     {
       "id": "sw-permit-decision-timeline",
@@ -569,29 +669,29 @@
       "verifiedDate": "2026-07-31",
       "ageDaysAsOfAudit": 15,
       "file": "data/uncertainty.json",
-      "path": "items[0].readings[1]"
+      "path": "items[1].readings[1]"
     },
     {
       "id": "temp-stay-address-deadline",
-      "value": "3 days",
+      "value": "15 days",
       "labelKey": "facts.tempStayAddressDeadline",
-      "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
       "sourceTier": 1,
-      "sourceName": "MUP — Address registration procedure (foreigners)",
-      "verifiedDate": "2026-08-15",
-      "ageDaysAsOfAudit": 0,
+      "sourceName": "Narodne novine — NN 55/2026, Art. 51 amending Aliens Act Art. 178(1)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
       "file": "data/start-work-checks.json",
       "path": "checks[4].facts[0]"
     },
     {
       "id": "temp-stay-address-deadline",
-      "value": "3 days",
+      "value": "15 days",
       "labelKey": "facts.tempStayAddressDeadline",
-      "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
       "sourceTier": 1,
-      "sourceName": "MUP — Address registration procedure (foreigners)",
-      "verifiedDate": "2026-08-15",
-      "ageDaysAsOfAudit": 0,
+      "sourceName": "Narodne novine — NN 55/2026, Art. 51 amending Aliens Act Art. 178(1)",
+      "verifiedDate": "2026-11-20",
+      "ageDaysAsOfAudit": -97,
       "file": "data/facts-catalog.json",
       "path": "facts.temp-stay-address-deadline"
     },
@@ -665,7 +765,7 @@
       "verifiedDate": "2026-07-31",
       "ageDaysAsOfAudit": 15,
       "file": "data/uncertainty.json",
-      "path": "items[0].readings[0]"
+      "path": "items[1].readings[0]"
     }
   ]
 }
