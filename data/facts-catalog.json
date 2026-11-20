@@ -4,16 +4,16 @@
     "Canonical shared fees/deadlines. Reference by id string in facts[] arrays elsewhere.",
     "Contested alternate readings stay in data/uncertainty.json — do not put them here.",
     "Stay-and-work path admin fee is €74.32 (MUP Work of TCN). €46.45 on the temporary-stay page is a different purpose — see artifacts/phase6e-verification.md.",
-    "Temporary-stay boravište / address registration (3 days) is not the same clock as short-stay eVisitor self-registration (2 days if the provider cannot register)."
+    "Temporary-stay boravište deadline is the statute figure in this catalog. The MUP procedure page still prints the pre-amendment clock — see data/uncertainty.json. Neither clock is short-stay eVisitor self-registration."
   ],
   "facts": {
     "temp-stay-address-deadline": {
-      "value": "3 days",
+      "value": "15 days",
       "labelKey": "facts.tempStayAddressDeadline",
-      "sourceUrl": "https://mup.gov.hr/gradjani-281562/moji-dokumenti-281563/stranci-333/upute-o-proceduri-prijava-odjava-prebivalista-boravista-odnosno-promjena-adrese-stanovanja-za-strance/112913",
+      "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
       "sourceTier": 1,
-      "sourceName": "MUP — Address registration procedure (foreigners)",
-      "verifiedDate": "2026-08-15"
+      "sourceName": "Narodne novine — NN 55/2026, Art. 51 amending Aliens Act Art. 178(1)",
+      "verifiedDate": "2026-11-20"
     },
     "permit-admin-fee": {
       "value": "€74.32",

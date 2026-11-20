@@ -72,7 +72,7 @@
     "importError": "Could not import that file. Use a residency-runbook case JSON export.",
     "exportPrivacyNote": "Exports can include employer identifiers from the case. Keep files private; do not commit them.",
     "exportHint": "Export is the durable file for this hire (case + progress). Browser storage is only a last-session cache — export before closing if you need the work elsewhere.",
-    "zagrebScope": "Scope: desks and competence are modeled for a Grad Zagreb employer/workplace. Other police administrations are not mapped yet.",
+    "zagrebScope": "Scope: PU zagrebačka covers Grad Zagreb and Zagrebačka županija. Other police administrations are not mapped yet.",
     "casePicker": "Case",
     "privateCase": "private",
     "overview": "Workflow overview",
@@ -102,7 +102,7 @@
     "art99InflowThreshold": "Employer inflow / turnover threshold (legal entity)",
     "nn552026InForce": "NN 55/2026 general in-force date",
     "lmtPositiveNoticeWindow": "File Single Permit after positive LMT notice",
-    "permitFee": "Stay-and-work permit administrative fee (police filing; due when notified of approval)",
+    "permitFee": "Stay-and-work permit administrative fee (due when notified of approval)",
     "biometricProductionFee": "Biometric residence permit production fee (regular procedure)",
     "biometricAdminFee": "Additional administrative fee for biometric residence permit issuance",
     "biometricCardFee": "Additional administrative fee for biometric residence permit issuance",
@@ -114,7 +114,13 @@
     "a1LanguageWithin": "A1.1 Croatian + Latin script exam after at least this much stay (required for extension when in force)",
     "a1DeferredForce": "Deferred force date for Aliens Act Art. 92.a(1)/(4)/(6) language obligation (NN 55/2026)",
     "longTermFee": "Long-term / permanent stay decision administrative fee",
-    "tempStayAddressDeadline": "Temporary-stay boravište / address registration deadline (from entry or change; Form 16a)"
+    "tempStayAddressDeadline": "Temporary-stay boravište / address registration deadline (from entry or change; Form 16a)",
+    "art99InflowNaturalPerson": "Employer inflow threshold when the employer is a natural person",
+    "permitDecisionExtension": "Extra time police may add to the stay-and-work decision window in an exceptional case (not seasonal)",
+    "housingMinArea": "Minimum floor area for the first third-country national in employer-provided housing",
+    "housingExtraArea": "Extra floor area for each additional third-country national in that housing",
+    "housingMaxInApartment": "Maximum third-country nationals in one apartment in a multi-unit building",
+    "housingRentCap": "Maximum rent as a share of the worker’s net pay when the employer provides or arranges housing"
   },
   "case": {
     "occupation": {
@@ -246,7 +252,7 @@
       "summary": "Contract, pay parity, Form 17a / housing, and tax readiness before HZZ/MUP filing.",
       "overview": {
         "title": "What to assemble",
-        "body": "Before HZZ or MUP filing, assemble the employer-side package: Croatian-law contract or binding offer, pay-parity rationale, current Form 17a (verify the live template — field specs are not invented here), housing evidence path, and tax/contribution standing. Use the guided checklist below."
+        "body": "Before the HZZ filing, assemble the employer-side package: a Croatian-law employment contract signed by both parties, pay-parity rationale, current Form 17a when the employer provides or arranges housing, and tax/contribution standing. Use the guided checklist below."
       },
       "check": {
         "guided": "I completed the guided employer-package self-check (all rows below)"
@@ -276,13 +282,13 @@
     },
     "filePermit": {
       "title": "File stay-and-work (Single Permit)",
-      "summary": "File in-country at the competent Zagreb police/MUP desk after LMT (unless exempt). Use Form 2a and cited fees.",
+      "summary": "File a new stay-and-work application on the HZZ portal after the labor market test, or immediately when the title is on the deficit list. Police and the Zagreb work-permit inbox are for extensions, Article 110, and cases that need neither the test nor an HZZ opinion.",
       "overview": {
         "title": "Zagreb filing overview",
-        "body": "For this Zagreb-seat case, file the stay-and-work application in-country once the labor market precondition is met and employer + worker documents are ready. Confirm the exact PU Zagrebačka receiving desk on MUP pages. Use the guided checklist below. Consular-channel notes (if any) stay in the nationality panel. Biometrics attendance is the next step."
+        "body": "For this Zagreb case, submit a new stay-and-work application on the HZZ portal that the MUP work-permits page links. Do that after a positive labor market notice, or immediately when the occupation is on the deficit list. Do not walk a first filing of this kind to the police counter. Biometrics, card pickup, and address registration stay with PU zagrebačka and are the next step. Consular notes stay in the nationality panel."
       },
       "check": {
-        "guided": "Filing guided checks complete (Form 2a, Zagreb desk, fees, submit, proof)"
+        "guided": "Filing guided checks complete (HZZ portal, Zagreb channel, fees, submit, proof)"
       }
     },
     "startWork": {
@@ -369,11 +375,11 @@
       "why": "Legal-entity employers must show the cited minimum inflow on the transaction account over the lookback HZZ applies.",
       "how": {
         "bank": "Request bank statements / turnover confirmation for the company transaction account(s).",
-        "window": "Sum inflows for the period HZZ requires and compare to the cited legal-entity threshold.",
+        "window": "Sum inflows for the period HZZ requires and compare to the cited threshold for this employer’s legal form. A company uses the higher figure. A natural person uses the lower figure.",
         "notFina": "Do not treat Fina published annual revenue alone as proof of transaction-account inflow."
       },
       "evidence": "Bank inflow evidence covering the required period, totaling at least the cited threshold.",
-      "caseHint": "Published company revenue (if any) is not bank inflow proof. Pull live bank evidence before filing."
+      "caseHint": "Published company revenue is not bank inflow proof. This example employer is a company, so use the legal-entity figure. Pull live bank evidence before filing."
     },
     "blocked": {
       "title": "No prolonged blocked account",
@@ -408,15 +414,15 @@
     "panelTitle": "Employer package self-check (guided)",
     "panelIntro": "Assemble the employer-side file before HZZ/MUP. Mark a row only after you have the evidence. Completing every row marks the Step 3 checklist item.",
     "contract": {
-      "title": "Employment contract / binding offer terms",
-      "why": "HZZ and MUP filings need a clear Croatian-law contract or binding offer: position, place of work, hours, and pay aligned with the occupation you will request.",
+      "title": "Employment contract signed by both parties",
+      "why": "HZZ states that the Aliens Act requires the employment contract. A pre-contract or a letter of intent is not accepted. Both parties sign. Put in the expected start date and a clause that the real start depends on the permit, the visa, or registration of temporary stay. The job title, occupation, and duties must match the application and the labor market test, or the deficit-list title.",
       "how": {
-        "draft": "Draft the contract or binding offer with role title, workplace, working time, and remuneration.",
-        "mup": "Cross-check stay-and-work document expectations on the MUP third-country national work page.",
-        "hzzTips": "Align wording with HZZ filing tips so title, duties, and workplace stay consistent across later LMT and permit filings."
+        "draft": "Draft the contract with role title, workplace, working time, pay, the expected start date, and the clause that the real start depends on the permit.",
+        "mup": "Cross-check stay-and-work document expectations on the MUP work-permits page.",
+        "hzzTips": "Use the HZZ answer on the contract. Do not attach a pre-contract or a letter of intent in its place."
       },
-      "evidence": "Signed or ready-to-sign contract / binding offer PDF plus company extract (OIB, representation).",
-      "caseHint": "Keep the occupation title consistent with NKD {nkd} ({nkdLabel}) and the duties you will put on the LMT request."
+      "evidence": "Contract PDF signed by the employer and the worker, plus the company extract (OIB, representation).",
+      "caseHint": "Keep the occupation title consistent with NKD {nkd} ({nkdLabel}) and the duties you will put on the labor market test or the deficit-list application."
     },
     "payParity": {
       "title": "Pay meets minimums and parity expectations",
@@ -429,25 +435,26 @@
       "evidence": "Pay table or offer letter showing amount + note of the official source you used for the minimum/parity check."
     },
     "form17a": {
-      "title": "Confirm current Form 17a (no invented field list)",
-      "why": "NN 55/2026 introduced Form 17a (employer compliance/liability). This runbook does not invent form fields — you must pull the live official template.",
+      "title": "Form 17a — declaration of adequate accommodation",
+      "why": "Form 17a is the housing declaration in the residence ordinance, not a general compliance form. The signer states that the accommodation meets the ordinance articles on type of housing, floor area, and rent. Notarization is not required. Download the current template.",
       "how": {
-        "nn": "Read the Form 17a / employer-obligation context in NN 55/2026.",
-        "mup": "Check MUP third-country national work pages for the current employer declaration / Form 17a channel.",
-        "verifyCurrent": "Download or obtain the current official Form 17a template from those channels — omit any field list that is not on the live form."
+        "nn": "Read the ordinance articles that define adequate accommodation and when Form 17a is attached.",
+        "mup": "Download the current Form 17a PDF from MUP. The April 2026 template asks for the address, the employer, and the worker.",
+        "verifyCurrent": "Use that live template. Do not add fields that are not on it. Floor area and rent are proved by the lease or the owner’s statement, not by extra boxes on this form."
       },
-      "evidence": "Current official Form 17a (blank or completed draft) with retrieval date noted.",
-      "caseHint": "Intentional omission: this wizard does not ship Form 17a field specifications."
+      "evidence": "Current official Form 17a, signed, with the retrieval date noted.",
+      "caseHint": "When the worker is coming to Croatia and the employer provides or arranges housing, attach Form 17a to the application. File the notarized lease or the owner’s statement when the address is registered."
     },
     "housing": {
       "title": "Housing evidence path",
-      "why": "NN 55/2026 clarified standards when the employer provides accommodation; if the worker arranges housing, the permit file still needs proof of accommodation.",
+      "why": "When the employer provides or arranges housing, the ordinance sets the cited floor area, the cap on how many third-country nationals may share an apartment, and the cap on rent as a share of net pay. Rent may not be withheld from wages automatically. The floor-area rule has an exception for certain hospitality buildings. If the worker arranges housing alone, the file still needs proof of accommodation.",
       "how": {
-        "path": "Decide employer-provided vs worker-arranged housing before filing.",
-        "nn": "Review housing-related standards in NN 55/2026 / MUP guidance — do not invent square-metre thresholds here.",
-        "document": "Collect lease, employer housing agreement, or other accommodation proof that matches the chosen path."
+        "path": "Decide employer-provided, employer-arranged, or worker-arranged housing before filing.",
+        "nn": "Check the accommodation against the cited ordinance figures. Give the worker the lease or an equivalent document that states the rent.",
+        "document": "For a worker coming to Croatia, keep Form 17a with the application and the notarized lease or owner’s statement for address registration."
       },
-      "evidence": "Lease / employer housing agreement / accommodation confirmation matching the chosen path."
+      "evidence": "Lease or owner’s statement, plus Form 17a when the employer provides or arranges the housing.",
+      "caseHint": "Hospitality-building housing is the ordinance exception to the floor-area figure. Read that exception before relying on the apartment numbers."
     },
     "tax": {
       "title": "Tax and contribution standing; blocked account",
@@ -612,7 +619,7 @@
       "title": "Lock the same title across filings",
       "why": "Mismatched titles between contract, LMT, and Single Permit create refusal risk.",
       "how": {
-        "contract": "Use the selected title on the employment contract / binding offer.",
+        "contract": "Use the selected title on the employment contract both parties will sign.",
         "lmt": "Use the same title and duties on the HZZ labor market test request.",
         "permit": "Carry the same wording into the MUP stay-and-work / Single Permit file."
       },
@@ -659,7 +666,7 @@
     "verifyOnSite": "Verify opening hours and contact details on the official site before you act.",
     "hzz": {
       "name": "Croatian Employment Service (HZZ)",
-      "role": "Runs the labor market test and publishes employer rules for hiring foreign workers.",
+      "role": "Runs the labor market test and receives new stay-and-work applications on its portal.",
       "hubLabel": "HZZ — foreign workers / labor market test",
       "addressNote": "Use the Zagreb regional office for local employer contact. Central HQ is Radnička cesta 1; published online hubs remain the filing source of truth."
     },
@@ -670,10 +677,10 @@
     },
     "puZagreb": {
       "name": "Police administration (Zagreb area)",
-      "role": "Competent police administration for Grad Zagreb stay-and-work follow-up, foreigner status desks, and biometric card logistics.",
+      "role": "Competent police administration for Grad Zagreb and Zagrebačka županija: follow-up after an HZZ filing, foreigner status, and card logistics.",
       "hubLabel": "PU zagrebačka — how and where to file",
-      "addressNote": "For this Grad Zagreb seat/workplace case, foreigner-status work is at Remetinečki gaj 13. Biometric card production/pickup for foreign nationals is at Petrinjska 30. Re-check the PU zagrebačka “how and where” page before you go — channels change.",
-      "emailNote": "zg.drzavljanstvo.stranci@mup.hr is published for certain foreigner-status e-mail filings. The separate radna.dozvola.zagreb@mup.hr channel is for non–labor-market-test / Art. 110 / extension paths only — not a first filing that still needs the labor market test."
+      "addressNote": "Foreigner-status work and pickup of issued work permits are at Remetinečki gaj 13. The current how-and-where page takes a worker’s address registration after the first permit by email, not as a required counter visit. A 2023 notice still sends biometric residence cards to Petrinjska 30. That how-and-where page no longer lists Petrinjska and lists the foreigner card at Remetinečki gaj. Re-check the page before you go.",
+      "emailNote": "zg.drzavljanstvo.stranci@mup.hr is the published inbox for address registration and several foreigner-status filings. The November 2026 work-permit email guide uses radna.dozvola.zagreb@mup.hr only when the application needs neither a labor market test nor an HZZ opinion, and only for intended stay in the city. Sesvete, Velika Gorica, Samobor, and Zaprešić have their own work-permit inboxes. Do not use any of those inboxes for a first filing that still needs the test or an HZZ opinion."
     },
     "fina": {
       "name": "Fina (company register / Info.BIZ)",
@@ -705,7 +712,7 @@
       "role": "U.S.-citizen practical guidance (entry/residence notes, FBI background-check pointers). Does not replace Croatian MUP/HZZ rules.",
       "hubLabel": "U.S. Embassy — entry and residence"
     },
-    "zagrebScope": "Scope note: desks and competence below are modeled for a Grad Zagreb employer/workplace (this case: Savska cesta area). Other police administrations are not mapped yet — confirm the competent desk on official pages before you visit or file."
+    "zagrebScope": "Scope note: PU zagrebačka covers Grad Zagreb and Zagrebačka županija. This case is a Grad Zagreb seat and workplace. Other police administrations are not mapped. Confirm the live how-and-where page before you visit or file."
   },
   "glossary": {
     "singlePermit": {
@@ -742,7 +749,7 @@
     },
     "form17a": {
       "title": "Form 17a",
-      "body": "An employer compliance/liability form introduced in the 2026 foreigners-law updates. Always download the current official template — this runbook does not invent form fields."
+      "body": "The declaration of adequate accommodation. The signer states that housing meets the residence ordinance. It does not have to be notarized. Download the current official template."
     },
     "oib": {
       "title": "OIB — personal/company tax ID",
@@ -774,7 +781,7 @@
     },
     "form2a": {
       "title": "Form 2a (Obrazac 2a)",
-      "body": "The official application form for a stay-and-work permit. Always download the current template from MUP Obrasci — this runbook does not invent form fields. Form 17a is a separate employer form."
+      "body": "The paper application MUP still publishes for stay-and-work requests that are handed to the police or emailed to a work-permit inbox. A new labor-market or deficit-list filing goes through the HZZ portal instead. Form 17a is the separate housing declaration."
     }
   },
   "wdGuide": {
@@ -856,7 +863,7 @@
   },
   "fpGuide": {
     "panelTitle": "Guided filing checks (Zagreb)",
-    "panelIntro": "Work through each row before you travel to the police desk. Completing every row marks Step 6 done. Fee amounts are cited from MUP; pay when MUP instructs (often on approval / at card collection). Biometrics attendance is Step 7.",
+    "panelIntro": "Work through each row before you submit on the HZZ portal. Completing every row marks Step 6 done. Fee amounts are cited from MUP; pay when MUP instructs (often on approval / at card collection). Biometrics attendance is Step 7.",
     "lmtPrecondition": {
       "title": "Labor market precondition still valid",
       "why": "You may file only with a positive HZZ notice still inside its validity window, or with a documented official exemption (for example a confirmed UV skip).",
@@ -871,53 +878,53 @@
       "title": "Full application file assembled",
       "why": "Incomplete files are rejected or delayed. Employer package, worker documents, and LMT/exemption proof must travel together.",
       "how": {
-        "employer": "Include the employer package from Step 3 (contract/offer, Form 17a path, housing, tax standing).",
+        "employer": "Include the employer package from Step 3 (signed contract, Form 17a when housing is provided or arranged, tax standing).",
         "worker": "Include worker documents from Step 5 (passport, criminal record path, insurance/housing/photos as required).",
         "lmt": "Include LMT notice or exemption proof from Step 4."
       },
-      "evidence": "Single folder (paper or PDF) with employer + worker + LMT/exemption set ready to hand in."
+      "evidence": "One PDF set with employer + worker + labor-market notice or exemption, ready to upload."
     },
     "competence": {
-      "title": "Confirm Zagreb competent desk",
-      "why": "MUP routes applications by intended place of stay, employer seat, or place of work. Wrong desk wastes the visit.",
+      "title": "Confirm the Zagreb filing channel",
+      "why": "MUP’s work-permits page sends a new labor-market filing and a new deficit-list filing to the HZZ portal. The police still decide, using the worker’s intended place of stay. A counter or work-permit inbox is a different channel.",
       "how": {
-        "rule": "Re-read MUP temporary-stay competence wording (stay / employer seat / place of work).",
-        "zagreb": "For this Zagreb-seat employer case, plan on Policijska uprava zagrebačka (PU Zagreb).",
-        "confirm": "Confirm the exact receiving counter on live MUP / PU Zagreb channels before you travel — do not rely on outdated maps."
+        "rule": "Open the MUP work-permits page and use the link for a deficit-list application, or the link that follows a positive labor market test.",
+        "zagreb": "For intended stay in Grad Zagreb or Zagrebačka županija, the deciding administration is PU zagrebačka. The application itself is still the HZZ portal.",
+        "confirm": "If this hire is an extension, Article 110, or a case that needs neither the test nor an HZZ opinion, switch to the police or email channel in the November 2026 guide. That is not this row’s default."
       },
-      "evidence": "Note of the confirmed desk name/address and the date you verified it.",
-      "caseHint": "This runbook assumes a Zagreb workplace/seat for the active case; other cities are not mapped yet."
+      "evidence": "Note of the HZZ portal link you will use, the date you opened the MUP page, and the worker’s intended place of stay.",
+      "caseHint": "This runbook assumes a Grad Zagreb workplace and seat. County stations inside PU zagrebačka matter when the exception email channel applies."
     },
     "form2a": {
-      "title": "Download current Form 2a (Obrazac 2a)",
-      "why": "The official application for a stay-and-work permit is Form 2a. Templates change — always pull the live form.",
+      "title": "Know when Form 2a is used",
+      "why": "MUP still publishes Form 2a for applications handed to the police or emailed to a work-permit inbox, including a seasonal filing done in person. This hire’s new labor-market or deficit-list application is the HZZ portal, not that paper form.",
       "how": {
-        "obrasci": "Open the MUP Obrasci (forms) page.",
-        "download": "Download Zahtjev za dozvolu za boravak i rad — Obrazac 2a (current edition).",
-        "noInvent": "Do not invent form fields from blogs or older PDFs — use only the live official template."
+        "obrasci": "Open the MUP work-permits page and follow its HZZ link for this kind of application.",
+        "download": "Download Form 2a only if you have switched to the police or email channel. Print, fill, and sign it by hand, then scan it, as the November 2026 email guide requires.",
+        "noInvent": "Do not invent portal fields from blogs or older PDFs."
       },
-      "evidence": "Current blank Form 2a PDF with retrieval date noted (draft fill optional).",
-      "caseHint": "Form 17a is a different employer form (Step 3). Filing uses Form 2a."
+      "evidence": "For the default path: a note that you will submit on the HZZ portal. For an exception path: the current Form 2a with the retrieval date.",
+      "caseHint": "Form 17a is the housing declaration in Step 3. It is not a substitute for the HZZ application."
     },
     "appointment": {
-      "title": "Confirm how to book or walk in",
-      "why": "Zagreb desks may require an appointment or accept walk-ins. Rules change; ask the competent office.",
+      "title": "Use the HZZ portal, not the work-permit inbox",
+      "why": "The November 2026 MUP guide limits the police email channel to applications that need neither a labor market test nor an HZZ opinion. A first filing of this hire does not qualify.",
       "how": {
-        "askPu": "Ask PU Zagrebačka (phone/counter instructions on official channels) how to book or whether walk-in is allowed for stay-and-work filing.",
-        "noInvent": "Do not invent a national e-booking URL — none is cited here as Tier 1 for the LMT filing path.",
-        "notEmail": "Do not use radna.dozvola.zagreb@mup.hr for a first LMT-required filing — that e-mail channel is for non-LMT / extensions / Art. 110 cases only."
+        "askPu": "Submit the new application from the MUP work-permits page link into the HZZ portal (burzarada, origin for work permits). Run the labor market test on the same portal first when the title is not on the deficit list.",
+        "noInvent": "The portal login is the official channel. Do not invent a separate national booking site for this filing.",
+        "notEmail": "Do not send this filing to radna.dozvola.zagreb@mup.hr, or to the Sesvete, Velika Gorica, Samobor, or Zaprešić inboxes. Those addresses are for the exception channel, and the city inbox is only for intended stay in the city."
       },
-      "evidence": "Written note of booking reference or walk-in instructions and the date confirmed."
+      "evidence": "Screenshot or saved confirmation of the HZZ portal page you will use, dated today."
     },
     "whoAppears": {
-      "title": "Who must appear",
-      "why": "MUP treats the stay-and-work filing as the third-country national’s application. The employer supplies supporting documents.",
+      "title": "Who files",
+      "why": "On this path the employer submits the new application online. The worker does not attend a Zagreb counter to lodge it. The worker still attends later for biometrics.",
       "how": {
-        "worker": "The worker (applicant) appears with a valid travel document and the completed Form 2a.",
-        "employerDocs": "Bring the full employer-side attachments; an employer representative may accompany but is not invented here as a mandatory co-signer at the counter.",
-        "nationality": "If the nationality panel says a consular channel applies instead, follow that panel — this guided path assumes in-country police filing."
+        "worker": "Keep the worker’s passport copy and signed contract in the upload. Personal appearance at PU zagrebačka is not the filing step.",
+        "employerDocs": "The employer (or a person authorized for the company) submits the portal application with the supporting PDFs.",
+        "nationality": "If the nationality panel describes a consular visa step, that step is after approval. It does not replace the HZZ filing."
       },
-      "evidence": "Plan of who attends + packed file matching Form 2a attachments."
+      "evidence": "Note of who holds the HZZ employer login and will submit."
     },
     "fees": {
       "title": "Know the fee schedule (pay when instructed)",
@@ -930,13 +937,13 @@
       "evidence": "Screenshot or printout of the live MUP fee wording dated today, plus a payment plan."
     },
     "submit": {
-      "title": "Submit at the confirmed desk",
-      "why": "The application is not filed until the competent office receives it.",
+      "title": "Submit on the HZZ portal",
+      "why": "The application is not filed until the HZZ portal accepts it. MUP then asks HZZ for the opinion and the police administration decides.",
       "how": {
-        "counter": "Attend the confirmed Zagreb desk (or completed booking) with the full file.",
-        "complete": "Hand in Form 2a + attachments; follow any on-site instructions for slips or missing items."
+        "counter": "Sign in on the HZZ portal from the MUP work-permits link and submit the assembled PDF set.",
+        "complete": "Upload the signed contract, worker documents, and the labor-market notice or deficit-list basis. Fix anything the portal marks incomplete before you leave the page."
       },
-      "evidence": "Submission receipt, stamp, or written confirmation from the desk."
+      "evidence": "Portal submission receipt or protocol number."
     },
     "proof": {
       "title": "Keep submission proof and a file copy",
@@ -973,10 +980,10 @@
     "panelIntro": "Work top to bottom after the stay-and-work file is submitted. Completing every row marks Step 7 done. Fee amounts match Step 6 cites — pay when MUP instructs.",
     "decision": {
       "title": "Wait for a positive decision",
-      "why": "Authorization to work comes from MUP’s decision on the stay-and-work application, not from filing alone.",
+      "why": "Authorization to work comes from MUP’s decision on the stay-and-work application, not from filing alone. The cited window includes the labor market test. In an exceptional non-seasonal case the police may add the cited extra period and must tell the applicant.",
       "how": {
-        "wait": "Monitor the application / keep contact details current with the competent police desk.",
-        "timeline": "Plan against the cited decision window; confirm operative wording on the statute / MUP page.",
+        "wait": "Watch the HZZ portal and the contact details you gave. The police administration for the worker’s intended stay issues the decision.",
+        "timeline": "Plan against the cited decision window and the cited extra period. Confirm the operative wording on the statute before you rely on the extra period.",
         "noWork": "Do not schedule productive paid work in Croatia until the decision is positive."
       },
       "evidence": "Written or portal confirmation of a positive stay-and-work decision (or clear refusal path if negative)."
@@ -1013,11 +1020,11 @@
     },
     "address": {
       "title": "Register temporary residence address",
-      "why": "A third-country national on temporary stay must register boravište (and later address changes) with the competent police administration. The cited deadline runs from entry into Croatia or from the change. This is not the same clock as short-stay hotel/eVisitor self-registration.",
+      "why": "A third-country national on temporary stay must register boravište and later address changes. The checklist adopts the statute’s cited deadline, counted from entry or from the change. The MUP procedure page still prints the old figure. This is not the short-stay hotel/eVisitor clock.",
       "how": {
-        "mup": "Read the MUP procedure for registering or changing a foreigner’s address (Form 16a).",
-        "desk": "Register at the competent Zagreb police desk for the actual address, with Form 16a and housing proof.",
-        "verify": "Put the cited deadline ({deadline}) on a shared calendar from entry or from a change of address, then re-check the live MUP procedure page before treating the date as final."
+        "mup": "Read both the statute amendment and the MUP procedure page. Use Form 16a either way.",
+        "desk": "For an address in PU zagrebačka, the current how-and-where page accepts this registration by email: Form 16a, a copy of the passport, and the landlord’s consent plus ID or a certified lease, as a PDF to zg.drzavljanstvo.stranci@mup.hr.",
+        "verify": "Put the cited deadline ({deadline}) on a shared calendar from entry or from a change of address. Re-open the conflict card before treating the date as final."
       },
       "evidence": "Registration confirmation / stamp for the worker’s temporary address (Form 16a).",
       "caseHint": "Do not mix this post-permit boravište clock with short-stay self-registration in the nationality panel. Permanent/long-term stay uses a different MUP deadline and is not this path."
@@ -1096,13 +1103,24 @@
     },
     "a1": {
       "title": "Plan A1.1 Croatian (Latin script) for extension",
-      "why": "Extension rules can require A1.1 proof after a cited stay period; some articles are deferred.",
+      "why": "Extension rules can require A1.1 proof after a cited stay period. The exam articles are deferred. When they apply, the employer pays for the exam.",
       "how": {
         "nn": "Read the A1.1 + Latin script obligation context in NN 55/2026.",
         "deferred": "Treat the deferred force date as the planning milestone for the deferred articles.",
         "schedule": "Start language learning early so the worker is ready when the rule applies to extensions."
       },
       "evidence": "Language plan with target level A1.1 Latin script + deferred-force date on the calendar."
+    },
+    "workArea": {
+      "title": "Work only in the police areas written on the certificate",
+      "why": "Since the June 2026 amendments, the worker may work only in the police administrations written on the certificate. A deficit-list permit covers areas where that occupation is deficitary. A labor-market permit covers the administration where the test found no suitable person. Working outside that area is an offense, and it can be a ground to revoke the permit.",
+      "how": {
+        "certificate": "Read the police administrations on the certificate before assigning a venue.",
+        "venues": "Do not send this hire to a venue outside those administrations, including another Croatian city.",
+        "extend": "If the work must cover more than one administration, ask HZZ for a labor market test for those areas before the move. That request can also be made after the permit is issued, and the result is written onto the certificate."
+      },
+      "evidence": "Copy of the certificate showing the inscribed police administrations, plus the list of venues this hire will actually work.",
+      "caseHint": "The certificate names police administrations. PU zagrebačka is one administration for Grad Zagreb and Zagrebačka županija, so a certificate that names it covers both. It does not cover another administration, including the coast, unless that administration is also written on the certificate."
     },
     "renewal": {
       "title": "Set renewal reminders before expiry",
@@ -1203,9 +1221,9 @@
         "decision": "Chosen on the occupation step. This node does not store a separate decision.",
         "branchLmt": "Default path: file the labor market test at HZZ, then use the positive-notice window.",
         "branchUv": "Do not treat this branch as a shortcut. Confirm the live official list on the occupation step.",
-        "join": "The stay-and-work filing is the same desk either way. The labor market test step is a pass-through when the skip branch is active.",
+        "join": "Both branches file the stay-and-work application on the HZZ portal. The labor market test step is a pass-through when the skip branch is active.",
         "workerDocs": "Worker file plus nationality-specific items (for example U.S. FBI checks) on the step page.",
-        "filePermit": "File at the competent Zagreb police / MUP desk. Fees and forms live on the step with citations.",
+        "filePermit": "File a new application on the HZZ portal. Fees and the police-inbox exceptions live on the step with citations.",
         "startWork": "Decision, biometrics, address registration, and social/tax filings before authorized start.",
         "comply": "Keep dates, mobility windows, and language-plan items on a calendar after the hire starts."
       },
@@ -1248,6 +1266,15 @@
       "meaning46": "Fee listed for other temporary-stay purposes — not the stay-and-work path used here.",
       "pageNoteWork": "Live MUP Work of TCN page (fees section).",
       "pageNoteTemp": "Live MUP temporary-stay fees page — other purposes."
+    },
+    "addressDeadline": {
+      "title": "Address-registration deadline",
+      "summary": "The statute and the MUP procedure page no longer state the same number of days.",
+      "spectrum": "Resolved for this checklist by following the statute. The procedure page has not been updated.",
+      "meaning15": "Aliens Act Art. 178(1) as amended by NN 55/2026: register temporary stay and the address within this period of entry or of a change.",
+      "meaning3": "The MUP procedure page still tells a person on temporary stay to register within the pre-amendment period. Do not use it as the deadline.",
+      "pageNoteStatute": "NN 55/2026, Art. 51, in force 4 June 2026. Replaces the previous day-count in Aliens Act Art. 178(1).",
+      "pageNoteMup": "Live MUP address-registration procedure, still showing the old temporary-stay clock on 20 Nov 2026."
     },
     "biometricFee": {
       "title": "Biometric card issuance fee",

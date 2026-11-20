@@ -29,7 +29,7 @@ Architecture and citation machinery are strong for a static runbook. Phase 6 del
 |---|---|---|
 | Fee history (€46.45 vs €74.32) | High (mitigated) | Path fee is €74.32 (MUP Work of TCN). Temporary-stay page still lists €46.45 for other purposes. Audit notes historically led with €46.45 and invited reintroduction of the bug. Regenerated notes must keep the Phase 6e distinction loud. |
 | Duplicated fee facts | Medium | Same €74.32 / biometric amounts live in `steps.json`, `file-permit-checks.json`, and `start-work-checks.json`. Next fee change is a multi-file footgun — needs a canonical fact catalog. |
-| Post-permit address deadline | Medium (closed 2026-08-15) | Catalog `temp-stay-address-deadline` cites MUP procedure: TCN on temporary stay registers boravište / address within **3 days** of entry or change (Form 16a). US-pack short-stay self-registration remains **2 days** and is labeled as a different duty. |
+| Post-permit address deadline | Reopened and closed 2026-11-20 | Catalog `temp-stay-address-deadline` now cites NN 55/2026 Art. 51: **15 days**. The MUP procedure page still printed **3 days** on that date (uncertainty card). US-pack short-stay self-registration remains **2 days** and is a different duty. |
 | Appointment check soft | Low–medium | Evidence can be “booking **or** walk-in note” — honest uncertainty, weak readiness signal. |
 | UV list edition `2023-03` | Medium | Stale banner is honest; still a filing risk if a newer UV decision exists but is unpublished as PDF. |
 | Assertive non-numeric copy | Low | “Wrong desk wastes the visit,” “like any other employee” — process guidance without fact objects; fine if clearly operational, risky if read as law. |

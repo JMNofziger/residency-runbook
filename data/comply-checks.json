@@ -176,6 +176,23 @@
         }
       ],
       "caseHintKeys": []
+    },
+    {
+      "id": "work-area",
+      "order": 7,
+      "titleKey": "cyGuide.workArea.title",
+      "whyKey": "cyGuide.workArea.why",
+      "howSteps": [
+        {
+          "labelKey": "cyGuide.workArea.how.certificate",
+          "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html"
+        },
+        { "labelKey": "cyGuide.workArea.how.venues" },
+        { "labelKey": "cyGuide.workArea.how.extend" }
+      ],
+      "evidenceKey": "cyGuide.workArea.evidence",
+      "facts": [],
+      "caseHintKeys": ["cyGuide.workArea.caseHint"]
     }
   ]
 }

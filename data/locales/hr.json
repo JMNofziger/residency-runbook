@@ -72,7 +72,7 @@
     "importError": "Datoteku nije moguće uvesti. Koristite JSON izvoz residency-runbook slučaja.",
     "exportPrivacyNote": "Izvoz može sadržavati identifikatore poslodavca iz slučaja. Držite datoteke privatnima; ne predajte ih u git.",
     "exportHint": "Izvoz je trajna datoteka za ovo zapošljavanje (slučaj + napredak). Spremanje u pregledniku je samo predmemorija sesije — izvezite prije zatvaranja ako trebate rad drugdje.",
-    "zagrebScope": "Opseg: šalteri i nadležnost modelirani su za poslodavca/mjesto rada Grad Zagreb. Druge policijske uprave još nisu mapirane.",
+    "zagrebScope": "Opseg: PU zagrebačka obuhvaća Grad Zagreb i Zagrebačku županiju. Druge policijske uprave još nisu mapirane.",
     "casePicker": "Slučaj",
     "privateCase": "privatno",
     "overview": "Pregled tijeka",
@@ -102,7 +102,7 @@
     "art99InflowThreshold": "Prag priljeva na transakcijski račun (pravna osoba)",
     "nn552026InForce": "Opći datum stupanja na snagu NN 55/2026",
     "lmtPositiveNoticeWindow": "Rok za podnošenje jedinstvene dozvole nakon pozitivnog mišljenja",
-    "permitFee": "Administrativna pristojba za dozvolu za boravak i rad (podnošenje u policiji; plaća se nakon obavijesti o odobrenju)",
+    "permitFee": "Administrativna pristojba za dozvolu za boravak i rad (plaća se nakon obavijesti o odobrenju)",
     "biometricProductionFee": "Pristojba za izradu biometrijske boravišne iskaznice (redovni postupak)",
     "biometricAdminFee": "Dodatna administrativna pristojba za izdavanje biometrijske iskaznice",
     "biometricCardFee": "Dodatna administrativna pristojba za izdavanje biometrijske iskaznice",
@@ -114,7 +114,13 @@
     "a1LanguageWithin": "Ispit A1.1 hrvatskog + latinice nakon najmanje ovoliko boravka (za produženje kad je na snazi)",
     "a1DeferredForce": "Odgođeno stupanje na snagu obveze iz čl. 92.a st. 1./4./6. (NN 55/2026)",
     "longTermFee": "Administrativna pristojba za rješenje o dugotrajnom / stalnom boravku",
-    "tempStayAddressDeadline": "Rok prijave boravišta / adrese na privremenom boravku (od ulaska ili od promjene; Obrazac 16a)"
+    "tempStayAddressDeadline": "Rok prijave boravišta / adrese na privremenom boravku (od ulaska ili od promjene; Obrazac 16a)",
+    "art99InflowNaturalPerson": "Prag priljeva kad je poslodavac fizička osoba",
+    "permitDecisionExtension": "Dodatno vrijeme koje policija može dodati roku odluke o boravku i radu u iznimnom slučaju (ne sezonski)",
+    "housingMinArea": "Najmanja površina za prvog državljanina treće zemlje u smještaju koji osigurava poslodavac",
+    "housingExtraArea": "Dodatna površina za svakog sljedećeg državljanina treće zemlje u tom smještaju",
+    "housingMaxInApartment": "Najviše državljana trećih zemalja u jednom stanu u višestambenoj zgradi",
+    "housingRentCap": "Najviša najamnina kao udio neto plaće kad poslodavac osigurava ili posreduje smještaj"
   },
   "case": {
     "occupation": {
@@ -246,7 +252,7 @@
       "summary": "Ugovor, usklađenost plaće, obrazac 17a / smještaj i porezna spremnost prije HZZ/MUP.",
       "overview": {
         "title": "Što sastaviti",
-        "body": "Prije HZZ ili MUP podnošenja sastavite paket poslodavca: ugovor ili obvezujuću ponudu po hrvatskom pravu, obrazloženje usklađenosti plaće, aktualni obrazac 17a (provjerite živi predložak — polja se ovdje ne izmišljaju), put dokaza o smještaju te porezni/doprinosni status. Koristite vođeni popis ispod."
+        "body": "Prije HZZ podnošenja sastavite paket poslodavca: ugovor o radu po hrvatskom pravu koji potpisuju obje strane, obrazloženje usklađenosti plaće, aktualni obrazac 17a kad poslodavac osigurava ili posreduje smještaj te porezni/doprinosni status. Koristite vođeni popis ispod."
       },
       "check": {
         "guided": "Završio/la sam vođenu samoprovjeru paketa poslodavca (svi redovi ispod)"
@@ -276,13 +282,13 @@
     },
     "filePermit": {
       "title": "Podnesite boravak i rad (jedinstvena dozvola)",
-      "summary": "Podnesite u zemlji na nadležnom zagrebačkom šalteru policije/MUP-a nakon TTR (osim izuzeća). Koristite Obrazac 2a i citirane pristojbe.",
+      "summary": "Novi zahtjev za boravak i rad podnesite na portalu HZZ-a nakon testa tržišta rada, ili odmah ako je zanimanje na listi deficitarnih. Policija i zagrebački e-mail za radne dozvole služe za produženja, članak 110. i slučajeve kojima ne treba ni test ni mišljenje HZZ-a.",
       "overview": {
         "title": "Pregled podnošenja u Zagrebu",
-        "body": "Za ovaj slučaj sa sjedištem u Zagrebu podnesite zahtjev za boravak i rad u zemlji kad je preduvjet tržišta rada ispunjen i dokumenti poslodavca + radnika spremni. Potvrdite točan šalter PU Zagrebačke na MUP stranicama. Koristite vođeni popis ispod. Konzularne napomene (ako postoje) su u panelu državljanstva. Biometrija je sljedeći korak."
+        "body": "Za ovaj zagrebački slučaj novi zahtjev za boravak i rad podnesite na portalu HZZ-a na koji upućuje MUP-ova stranica o radnim dozvolama. To učinite nakon pozitivne obavijesti o testu tržišta rada, ili odmah ako je zanimanje na listi deficitarnih. Prvo podnošenje ove vrste ne nosite na šalter. Biometrija, preuzimanje iskaznice i prijava adrese ostaju kod PU zagrebačke i sljedeći su korak. Konzularne napomene ostaju u panelu državljanstva."
       },
       "check": {
-        "guided": "Vođene provjere podnošenja gotove (Obrazac 2a, šalter Zagreb, pristojbe, predaja, dokaz)"
+        "guided": "Vođene provjere podnošenja gotove (portal HZZ-a, zagrebački kanal, pristojbe, predaja, dokaz)"
       }
     },
     "startWork": {
@@ -369,11 +375,11 @@
       "why": "Poslodavac — pravna osoba mora pokazati citirani minimalni priljev na transakcijski račun u razdoblju koje primjenjuje HZZ.",
       "how": {
         "bank": "Zatražite izvatke prometa / potvrdu banke za transakcijski račun tvrtke.",
-        "window": "Zbrojite priljeve za razdoblje koje HZZ traži i usporedite s citiranim pragom za pravnu osobu.",
+        "window": "Zbrojite priljeve za razdoblje koje HZZ traži i usporedite s citiranim pragom za pravni oblik poslodavca. Društvo koristi viši iznos. Fizička osoba koristi niži iznos.",
         "notFina": "Objavljeni godišnji prihod na Fini sam po sebi nije dokaz priljeva na transakcijski račun."
       },
       "evidence": "Bankovni dokazi priljeva za traženo razdoblje najmanje u citiranom iznosu.",
-      "caseHint": "Objavljeni prihod tvrtke (ako postoji) nije dokaz bankovnog priljeva. Prije podnošenja pribavite žive bankovne dokaze."
+      "caseHint": "Objavljeni prihod tvrtke nije dokaz bankovnog priljeva. Ovaj primjer poslodavca je društvo, pa koristite iznos za pravnu osobu. Prije podnošenja pribavite žive bankovne dokaze."
     },
     "blocked": {
       "title": "Nema dugotrajne blokade računa",
@@ -408,15 +414,15 @@
     "panelTitle": "Samoprovjera paketa poslodavca (vođeno)",
     "panelIntro": "Sastavite paket poslodavca prije HZZ/MUP. Označite red samo nakon što imate dokaze. Dovršetak svih redova označava stavku na kontrolnom popisu Koraka 3.",
     "contract": {
-      "title": "Ugovor o radu / obvezujuća ponuda",
-      "why": "Za HZZ i MUP potrebni su jasan ugovor ili obvezujuća ponuda po hrvatskom pravu: radno mjesto, mjesto rada, sati i plaća usklađeni sa zanimanjem koje ćete tražiti.",
+      "title": "Ugovor o radu koji potpisuju obje strane",
+      "why": "HZZ navodi da Zakon o strancima traži ugovor o radu. Predugovor ili pismo namjere ne prihvaćaju se. Potpisuju obje strane. Upišite očekivani datum početka i klauzulu da stvarni početak ovisi o dozvoli, vizi ili prijavi privremenog boravka. Naziv radnog mjesta, zanimanje i opis poslova moraju odgovarati zahtjevu i testu tržišta rada, odnosno zanimanju s liste deficitarnih.",
       "how": {
-        "draft": "Nacrtajte ugovor ili obvezujuću ponudu s nazivom uloge, mjestom rada, radnim vremenom i naknadom.",
-        "mup": "Uskladite očekivanja dokumenata na MUP stranici o radu državljana trećih zemalja.",
-        "hzzTips": "Uskladite formulacije s HZZ savjetima za predaju kako bi naziv, dužnosti i mjesto rada ostali dosljedni kasnije."
+        "draft": "Nacrtajte ugovor s nazivom uloge, mjestom rada, radnim vremenom, plaćom, očekivanim početkom i klauzulom da stvarni početak ovisi o dozvoli.",
+        "mup": "Uskladite očekivanja dokumenata na MUP-ovoj stranici o radnim dozvolama.",
+        "hzzTips": "Držite se HZZ-ova odgovora o ugovoru. Umjesto ugovora ne prilažite predugovor ni pismo namjere."
       },
-      "evidence": "Potpisani ili spremni ugovor / ponuda (PDF) + izvadak tvrtke (OIB, zastupanje).",
-      "caseHint": "Držite naziv zanimanja usklađenim s NKD {nkd} ({nkdLabel}) i dužnostima koje ćete staviti u zahtjev za TTR."
+      "evidence": "PDF ugovora koji su potpisali poslodavac i radnik, plus izvadak društva (OIB, zastupanje).",
+      "caseHint": "Držite naziv zanimanja usklađenim s NKD {nkd} ({nkdLabel}) i dužnostima koje ćete staviti u test tržišta rada ili u zahtjev za deficitarno zanimanje."
     },
     "payParity": {
       "title": "Plaća zadovoljava minimume i usklađenost",
@@ -429,25 +435,26 @@
       "evidence": "Tablica plaće ili ponuda s iznosom + bilješka o službenom izvoru provjere minimuma/usklađenosti."
     },
     "form17a": {
-      "title": "Potvrdite aktualni obrazac 17a (bez izmišljenog popisa polja)",
-      "why": "NN 55/2026 uveo je obrazac 17a (usklađenost/odgovornost poslodavca). Ovaj priručnik ne izmišlja polja obrasca — morate preuzeti živi službeni predložak.",
+      "title": "Obrazac 17a — izjava o primjerenom smještaju",
+      "why": "Obrazac 17a je izjava o smještaju iz Pravilnika o boravku, a ne opći obrazac usklađenosti. Potpisnik izjavljuje da smještaj udovoljava člancima o vrsti smještaja, površini i najamnini. Ovjera kod javnog bilježnika nije potrebna. Preuzmite aktualni predložak.",
       "how": {
-        "nn": "Pročitajte kontekst obrasca 17a / obveza poslodavca u NN 55/2026.",
-        "mup": "Provjerite MUP stranice o radu državljana trećih zemalja za aktualni kanal izjave / obrasca 17a.",
-        "verifyCurrent": "Preuzmite ili pribavite aktualni službeni obrazac 17a s tih kanala — izostavite popis polja koji nije na živom obrascu."
+        "nn": "Pročitajte članke Pravilnika koji određuju primjeren smještaj i kad se prilaže Obrazac 17a.",
+        "mup": "Preuzmite aktualni PDF obrasca 17a s MUP-a. Predložak iz travnja 2026. traži adresu, poslodavca i radnika.",
+        "verifyCurrent": "Koristite taj živi predložak. Ne dodajite polja kojih na njemu nema. Površina i najamnina dokazuju se ugovorom o najmu ili izjavom vlasnika, a ne dodatnim kućicama na ovom obrascu."
       },
-      "evidence": "Aktualni službeni obrazac 17a (prazan ili nacrt) s datumom preuzimanja.",
-      "caseHint": "Namjerni izostanak: ovaj čarobnjak ne isporučuje specifikacije polja obrasca 17a."
+      "evidence": "Aktualni službeni Obrazac 17a, potpisan, s datumom preuzimanja.",
+      "caseHint": "Kad radnik dolazi u Hrvatsku, a poslodavac osigurava ili posreduje smještaj, Obrazac 17a ide uz zahtjev. Ovjereni ugovor o najmu ili izjavu vlasnika predajte kod prijave adrese."
     },
     "housing": {
       "title": "Put dokaza o smještaju",
-      "why": "NN 55/2026 pojasnio je standarde kad poslodavac osigurava smještaj; ako radnik sam uređuje smještaj, spisu za dozvolu i dalje treba dokaz smještaja.",
+      "why": "Kad poslodavac osigurava ili posreduje smještaj, Pravilnik propisuje citiranu površinu, ograničenje broja državljana trećih zemalja u stanu i ograničenje najamnine u odnosu na neto plaću. Najamnina se ne smije automatski ustezati iz plaće. Pravilo o površini ima iznimku za određene ugostiteljske građevine. Ako radnik sam osigurava smještaj, spisu i dalje treba dokaz smještaja.",
       "how": {
-        "path": "Prije podnošenja odlučite: smještaj poslodavca ili radnikov najam.",
-        "nn": "Pregledajte standarde smještaja u NN 55/2026 / MUP smjernicama — ovdje ne izmišljajte pragove u m².",
-        "document": "Prikupite ugovor o najmu, sporazum o smještaju poslodavca ili drugi dokaz koji odgovara odabranom putu."
+        "path": "Prije podnošenja odlučite osigurava li smještaj poslodavac, posreduje li ili ga radnik uređuje sam.",
+        "nn": "Uskladite smještaj s citiranim iznosima iz Pravilnika. Radniku dajte ugovor o najmu ili jednakovrijedan dokument u kojem je navedena najamnina.",
+        "document": "Za radnika koji dolazi u Hrvatsku, Obrazac 17a držite uz zahtjev, a ovjereni ugovor o najmu ili izjavu vlasnika za prijavu adrese."
       },
-      "evidence": "Najam / sporazum poslodavca / potvrda smještaja prema odabranom putu."
+      "evidence": "Ugovor o najmu ili izjava vlasnika, plus Obrazac 17a kad poslodavac osigurava ili posreduje smještaj.",
+      "caseHint": "Smještaj u ugostiteljskoj građevini je iznimka Pravilnika od brojke o površini. Pročitajte tu iznimku prije nego što se oslonite na brojke za stan."
     },
     "tax": {
       "title": "Porezni i doprinosni status; blokirani račun",
@@ -612,7 +619,7 @@
       "title": "Zaključajte isti naziv na svim podnošenjima",
       "why": "Nesklad naziva između ugovora, TTR-a i jedinstvene dozvole stvara rizik odbijanja.",
       "how": {
-        "contract": "Koristite odabrani naziv na ugovoru o radu / obvezujućoj ponudi.",
+        "contract": "Koristite odabrani naziv na ugovoru o radu koji će potpisati obje strane.",
         "lmt": "Isti naziv i dužnosti stavite na HZZ zahtjev za test tržišta rada.",
         "permit": "Isti tekst prenesite u MUP spis za boravak i rad / jedinstvenu dozvolu."
       },
@@ -659,7 +666,7 @@
     "verifyOnSite": "Prije radnje potvrdite radno vrijeme i kontakte na službenoj stranici.",
     "hzz": {
       "name": "Hrvatski zavod za zapošljavanje (HZZ)",
-      "role": "Provodi test tržišta rada i objavljuje pravila za zapošljavanje stranaca.",
+      "role": "Provodi test tržišta rada i na svom portalu prima nove zahtjeve za boravak i rad.",
       "hubLabel": "HZZ — stranci / test tržišta rada",
       "addressNote": "Za lokalni kontakt poslodavca koristite područnu službu Zagreb. Središnji ured je Radnička cesta 1; objavljeni online hubovi ostaju izvor istine za podnošenje."
     },
@@ -670,10 +677,10 @@
     },
     "puZagreb": {
       "name": "Policijska uprava (područje Zagreba)",
-      "role": "Nadležna policijska uprava za praćenje boravka i rada u Gradu Zagrebu, šaltere statusa stranaca i biometrijske iskaznice.",
+      "role": "Nadležna policijska uprava za Grad Zagreb i Zagrebačku županiju: praćenje nakon HZZ podnošenja, status stranaca i iskaznice.",
       "hubLabel": "PU zagrebačka — kako i gdje riješiti",
-      "addressNote": "Za ovaj predmet sa sjedištem/mjestom rada u Gradu Zagrebu statusni poslovi stranaca su na Remetinečkom gaju 13. Biometrijske iskaznice za strance — Petrinjska 30. Prije odlaska ponovno provjerite stranicu PU zagrebačke „kako i gdje“ — kanali se mijenjaju.",
-      "emailNote": "zg.drzavljanstvo.stranci@mup.hr objavljen je za određene e-mail podneske statusa stranaca. Odvojeni kanal radna.dozvola.zagreb@mup.hr namijenjen je putovima bez testa tržišta rada / čl. 110. / produženjima — ne za prvo podnošenje koje još treba test tržišta rada."
+      "addressNote": "Statusni poslovi stranaca i uručenje izdanih radnih dozvola su na Remetinečkom gaju 13. Aktualna stranica „kako i gdje“ prijavu adrese radnika nakon prve dozvole prima e-mailom, a ne kao obvezan dolazak na šalter. Obavijest iz 2023. i dalje šalje biometrijske boravišne iskaznice u Petrinjsku 30. Ta stranica „kako i gdje“ Petrinjsku više ne navodi, a iskaznicu za stranca navodi na Remetinečkom gaju. Prije odlaska ponovno provjerite stranicu.",
+      "emailNote": "zg.drzavljanstvo.stranci@mup.hr je objavljeni pretinac za prijavu adrese i dio statusnih podnesaka. Uputa za e-mail iz studenoga 2026. koristi radna.dozvola.zagreb@mup.hr samo kad zahtjevu ne treba ni test tržišta rada ni mišljenje HZZ-a, i samo za namjeravani boravak u gradu. Sesvete, Velika Gorica, Samobor i Zaprešić imaju vlastite pretince za radne dozvole. Nijedan od tih pretinaca ne koristite za prvo podnošenje kojem još treba test ili mišljenje HZZ-a."
     },
     "fina": {
       "name": "Fina (registar tvrtki / Info.BIZ)",
@@ -705,7 +712,7 @@
       "role": "Praktične smjernice za državljane SAD-a (ulazak/boravak, FBI pozadinska provjera). Ne zamjenjuje hrvatska MUP/HZZ pravila.",
       "hubLabel": "Veleposlanstvo SAD-a — ulazak i boravak"
     },
-    "zagrebScope": "Napomena o opsegu: šalteri i nadležnost dolje modelirani su za poslodavca/mjesto rada Grad Zagreb (ovaj predmet: područje Savske ceste). Druge policijske uprave još nisu mapirane — potvrdite nadležni šalter na službenim stranicama prije posjeta ili podnošenja."
+    "zagrebScope": "Napomena o opsegu: PU zagrebačka obuhvaća Grad Zagreb i Zagrebačku županiju. Ovaj predmet ima sjedište i mjesto rada u Gradu Zagrebu. Druge policijske uprave nisu mapirane. Prije posjeta ili podnošenja provjerite živu stranicu „kako i gdje“."
   },
   "glossary": {
     "singlePermit": {
@@ -742,7 +749,7 @@
     },
     "form17a": {
       "title": "Obrazac 17a",
-      "body": "Obrazac usklađenosti/odgovornosti poslodavca uveden izmjenama 2026. Uvijek preuzmite aktualni službeni predložak — ovaj priručnik ne izmišlja polja."
+      "body": "Izjava o primjerenom smještaju. Potpisnik izjavljuje da smještaj udovoljava Pravilniku o boravku. Ne mora biti ovjerena kod javnog bilježnika. Preuzmite aktualni službeni predložak."
     },
     "oib": {
       "title": "OIB",
@@ -774,7 +781,7 @@
     },
     "form2a": {
       "title": "Obrazac 2a",
-      "body": "Službeni obrazac zahtjeva za dozvolu za boravak i rad. Uvijek preuzmite aktualni predložak s MUP Obrasci — ovaj priručnik ne izmišlja polja. Obrazac 17a je zaseban obrazac poslodavca."
+      "body": "Papirnati zahtjev koji MUP i dalje objavljuje za podneske koji se predaju policiji ili šalju na e-mail za radne dozvole. Novo podnošenje nakon testa tržišta rada ili za deficitarno zanimanje ide preko portala HZZ-a. Obrazac 17a je zasebna izjava o smještaju."
     }
   },
   "wdGuide": {
@@ -856,7 +863,7 @@
   },
   "fpGuide": {
     "panelTitle": "Vođene provjere podnošenja (Zagreb)",
-    "panelIntro": "Prođite svaki red prije odlaska na šalter. Kad su svi redovi gotovi, Korak 6 je označen. Pristojbe su citirane s MUP-a; platite kad MUP naloži (često pri odobrenju / preuzimanju iskaznice). Biometrija je Korak 7.",
+    "panelIntro": "Prođite svaki red prije predaje na portalu HZZ-a. Kad su svi redovi gotovi, Korak 6 je označen. Pristojbe su citirane s MUP-a; platite kad MUP naloži (često pri odobrenju / preuzimanju iskaznice). Biometrija je Korak 7.",
     "lmtPrecondition": {
       "title": "Preduvjet tržišta rada još vrijedi",
       "why": "Zahtjev možete podnijeti samo s pozitivnim mišljenjem HZZ unutar roka valjanosti ili s dokumentiranim službenim izuzećem (npr. potvrđeni UV preskok).",
@@ -871,53 +878,53 @@
       "title": "Potpuni spis zahtjeva sastavljen",
       "why": "Nepotpuni spisi se odbijaju ili kasne. Paket poslodavca, dokumenti radnika i dokaz TTR/izuzeća moraju ići zajedno.",
       "how": {
-        "employer": "Uključite paket poslodavca iz Koraka 3 (ugovor/ponuda, put obrasca 17a, smještaj, porezni status).",
+        "employer": "Uključite paket poslodavca iz Koraka 3 (potpisani ugovor, Obrazac 17a kad se smještaj osigurava ili posreduje, porezni status).",
         "worker": "Uključite dokumente radnika iz Koraka 5 (putovnica, kaznena evidencija, osiguranje/smještaj/fotografije prema potrebi).",
         "lmt": "Uključite mišljenje TTR ili dokaz izuzeća iz Koraka 4."
       },
-      "evidence": "Jedna mapa (papir ili PDF) s poslodavcem + radnikom + TTR/izuzećem spremna za predaju."
+      "evidence": "Jedan PDF komplet s poslodavcem + radnikom + obavijesti o testu ili izuzećem, spreman za učitavanje."
     },
     "competence": {
-      "title": "Potvrdite nadležni šalter u Zagrebu",
-      "why": "MUP usmjerava zahtjeve prema mjestu namjeravanog boravka, sjedištu poslodavca ili mjestu rada. Pogrešan šalter gubi posjet.",
+      "title": "Potvrdite zagrebački kanal podnošenja",
+      "why": "MUP-ova stranica o radnim dozvolama novo podnošenje nakon testa tržišta rada i novo podnošenje za deficitarno zanimanje šalje na portal HZZ-a. Policija i dalje odlučuje, prema mjestu namjeravanog boravka radnika. Šalter ili e-mail za radne dozvole drugi je kanal.",
       "how": {
-        "rule": "Ponovno pročitajte MUP pravilo nadležnosti (boravak / sjedište / mjesto rada).",
-        "zagreb": "Za ovaj slučaj sa sjedištem u Zagrebu planirajte Policijsku upravu zagrebačku (PU Zagreb).",
-        "confirm": "Potvrdite točan šalter na živim MUP / PU Zagreb kanalima prije puta — ne oslanjajte se na zastarjele karte."
+        "rule": "Otvorite MUP-ovu stranicu o radnim dozvolama i koristite poveznicu za deficitarno zanimanje ili poveznicu koja slijedi nakon pozitivnog testa tržišta rada.",
+        "zagreb": "Za namjeravani boravak u Gradu Zagrebu ili Zagrebačkoj županiji odlučuje PU zagrebačka. Sam zahtjev i dalje ide na portal HZZ-a.",
+        "confirm": "Ako je ovo produženje, članak 110. ili slučaj kojem ne treba ni test ni mišljenje HZZ-a, prijeđite na policijski ili e-mail kanal iz upute iz studenoga 2026. To nije zadani put ovog reda."
       },
-      "evidence": "Bilješka o potvrđenom nazivu/adresi šaltera i datumu provjere.",
-      "caseHint": "Ovaj priručnik pretpostavlja zagrebačko sjedište/mjesto rada aktivnog slučaja; drugi gradovi još nisu mapirani."
+      "evidence": "Bilješka o poveznici portala HZZ-a koju ćete koristiti, datumu otvaranja MUP stranice i mjestu namjeravanog boravka radnika.",
+      "caseHint": "Ovaj priručnik pretpostavlja mjesto rada i sjedište u Gradu Zagrebu. Postaje u županiji unutar PU zagrebačke važne su kad se koristi iznimni e-mail kanal."
     },
     "form2a": {
-      "title": "Preuzmite aktualni Obrazac 2a",
-      "why": "Službeni zahtjev za dozvolu za boravak i rad je Obrazac 2a. Predlošci se mijenjaju — uvijek preuzmite živi obrazac.",
+      "title": "Znajte kad se koristi Obrazac 2a",
+      "why": "MUP i dalje objavljuje Obrazac 2a za zahtjeve koji se predaju policiji ili šalju na e-mail za radne dozvole, uključujući sezonsko podnošenje osobno. Novo podnošenje ovog zapošljavanja nakon testa ili za deficitarno zanimanje je portal HZZ-a, a ne taj papirnati obrazac.",
       "how": {
-        "obrasci": "Otvorite MUP stranicu Obrasci.",
-        "download": "Preuzmite Zahtjev za dozvolu za boravak i rad — Obrazac 2a (aktualno izdanje).",
-        "noInvent": "Ne izmišljajte polja iz blogova ili starih PDF-ova — koristite samo živi službeni predložak."
+        "obrasci": "Otvorite MUP-ovu stranicu o radnim dozvolama i slijedite njezinu poveznicu na HZZ za ovu vrstu zahtjeva.",
+        "download": "Preuzmite Obrazac 2a samo ako ste prešli na policijski ili e-mail kanal. Ispišite ga, ispunite i potpišite rukom, pa skenirajte, kako traži uputa iz studenoga 2026.",
+        "noInvent": "Ne izmišljajte polja portala iz blogova ili starih PDF-ova."
       },
-      "evidence": "Aktualni prazan PDF Obrasca 2a s datumom preuzimanja (skica ispune nije obavezna).",
-      "caseHint": "Obrazac 17a je drugi obrazac poslodavca (Korak 3). Podnošenje koristi Obrazac 2a."
+      "evidence": "Za zadani put: bilješka da ćete podnijeti na portalu HZZ-a. Za iznimni put: aktualni Obrazac 2a s datumom preuzimanja.",
+      "caseHint": "Obrazac 17a je izjava o smještaju u Koraku 3. Nije zamjena za zahtjev na HZZ-u."
     },
     "appointment": {
-      "title": "Potvrdite naručivanje ili dolazak bez termina",
-      "why": "Zagrebački šalteri mogu tražiti termin ili prihvaćati dolazak bez najave. Pravila se mijenjaju; pitajte nadležni ured.",
+      "title": "Koristite portal HZZ-a, ne pretinac za radne dozvole",
+      "why": "MUP-ova uputa iz studenoga 2026. e-mail kanal policije ograničava na zahtjeve kojima ne treba ni test tržišta rada ni mišljenje HZZ-a. Prvo podnošenje ovog zapošljavanja ne spada u to.",
       "how": {
-        "askPu": "Pitajte PU Zagrebačku (telefon/upute na službenim kanalima) kako naručiti termin ili je li moguć dolazak bez termina za boravak i rad.",
-        "noInvent": "Ne izmišljajte nacionalni URL za e-naručivanje — ovdje nije citiran kao Tier 1 za TTR put podnošenja.",
-        "notEmail": "Ne koristite radna.dozvola.zagreb@mup.hr za prvo podnošenje koje zahtijeva TTR — taj e-mail je samo za slučajeve bez TTR / produženja / čl. 110."
+        "askPu": "Novi zahtjev podnesite s poveznice na MUP-ovoj stranici o radnim dozvolama na portal HZZ-a (burzarada, prijava za radne dozvole). Test tržišta rada prvo provedite na istom portalu ako zanimanje nije na listi deficitarnih.",
+        "noInvent": "Prijava na portal je službeni kanal. Ne izmišljajte zasebno nacionalno mjesto za naručivanje ovog podnošenja.",
+        "notEmail": "Ovaj zahtjev ne šaljite na radna.dozvola.zagreb@mup.hr ni na pretince Sesveta, Velike Gorice, Samobora ili Zaprešića. Te adrese su za iznimni kanal, a gradski pretinac samo za namjeravani boravak u gradu."
       },
-      "evidence": "Pisana bilješka reference termina ili uputa za dolazak bez najave i datum potvrde."
+      "evidence": "Snimka zaslona ili spremljena potvrda stranice portala HZZ-a koju ćete koristiti, s današnjim datumom."
     },
     "whoAppears": {
-      "title": "Tko se mora pojaviti",
-      "why": "MUP tretira zahtjev za boravak i rad kao zahtjev državljanina treće zemlje. Poslodavac dostavlja prateću dokumentaciju.",
+      "title": "Tko podnosi",
+      "why": "Na ovom putu poslodavac novi zahtjev podnosi online. Radnik ne dolazi na zagrebački šalter da ga preda. Radnik kasnije i dalje dolazi na biometriju.",
       "how": {
-        "worker": "Radnik (podnositelj) dolazi s valjanom putnom ispravom i ispunjenim Obrascem 2a.",
-        "employerDocs": "Ponesite sve priloge poslodavca; predstavnik poslodavca može pratiti, ali ovdje ne izmišljamo obvezno zajedničko potpisivanje na šalteru.",
-        "nationality": "Ako panel državljanstva kaže da vrijedi konzularni kanal, slijedite taj panel — ovaj vođeni put pretpostavlja podnošenje u policiji u zemlji."
+        "worker": "U učitavanje stavite presliku putovnice radnika i potpisani ugovor. Osobni dolazak u PU zagrebačku nije korak podnošenja.",
+        "employerDocs": "Poslodavac (ili osoba ovlaštena za društvo) podnosi zahtjev na portalu s popratnim PDF-ovima.",
+        "nationality": "Ako panel državljanstva opisuje konzularni korak za vizu, taj korak je nakon odobrenja. Ne zamjenjuje HZZ podnošenje."
       },
-      "evidence": "Plan tko dolazi + spis usklađen s prilozima Obrasca 2a."
+      "evidence": "Bilješka tko ima HZZ prijavu poslodavca i tko će podnijeti."
     },
     "fees": {
       "title": "Znajte raspored pristojbi (platite kad nalože)",
@@ -930,13 +937,13 @@
       "evidence": "Snimka ili ispis živog MUP teksta o pristojbama s današnjim datumom te plan plaćanja."
     },
     "submit": {
-      "title": "Predajte na potvrđenom šalteru",
-      "why": "Zahtjev nije podnesen dok ga nadležni ured ne zaprimi.",
+      "title": "Podnesite na portalu HZZ-a",
+      "why": "Zahtjev nije podnesen dok ga portal HZZ-a ne zaprimi. MUP zatim od HZZ-a traži mišljenje, a policijska uprava odlučuje.",
       "how": {
-        "counter": "Dođite na potvrđeni zagrebački šalter (ili dogovoreni termin) s potpunim spisom.",
-        "complete": "Predajte Obrazac 2a + priloge; slijedite upute na mjestu za uplatnice ili nedostajuće stavke."
+        "counter": "Prijavite se na portal HZZ-a s poveznice na MUP-ovoj stranici o radnim dozvolama i podnesite sastavljeni PDF komplet.",
+        "complete": "Učitajte potpisani ugovor, dokumente radnika i obavijest o testu ili osnovu deficitarnog zanimanja. Ispravite sve što portal označi nepotpunim prije nego napustite stranicu."
       },
-      "evidence": "Potvrda predaje, pečat ili pisana potvrda šaltera."
+      "evidence": "Potvrda podnošenja s portala ili broj protokola."
     },
     "proof": {
       "title": "Zadržite dokaz predaje i kopiju spisa",
@@ -973,10 +980,10 @@
     "panelIntro": "Idite odozgo prema dolje nakon podnošenja zahtjeva za boravak i rad. Kad su svi redovi gotovi, Korak 7 je označen. Iznosi pristojbi odgovaraju Koraku 6 — platite kad MUP naloži.",
     "decision": {
       "title": "Pričekajte pozitivnu odluku",
-      "why": "Odobrenje za rad dolazi odlukom MUP-a o zahtjevu za boravak i rad, ne samim podnošenjem.",
+      "why": "Odobrenje za rad dolazi odlukom MUP-a o zahtjevu za boravak i rad, ne samim podnošenjem. Citirani rok uključuje test tržišta rada. U iznimnom nesezonskom slučaju policija može dodati citirano dodatno razdoblje i mora o tome obavijestiti podnositelja.",
       "how": {
-        "wait": "Pratite predmet / držite kontakt podatke ažurnima kod nadležnog šaltera.",
-        "timeline": "Planirajte prema citiranom roku odluke; potvrdite operativni tekst u propisu / na MUP stranici.",
+        "wait": "Pratite portal HZZ-a i kontakt podatke koje ste dali. Odluku izdaje policijska uprava prema mjestu namjeravanog boravka radnika.",
+        "timeline": "Planirajte prema citiranom roku odluke i citiranom dodatnom razdoblju. Prije oslanjanja na dodatno razdoblje potvrdite tekst u propisu.",
         "noWork": "Ne planirajte produktivni plaćeni rad u Hrvatskoj dok odluka nije pozitivna."
       },
       "evidence": "Pisana ili portalna potvrda pozitivne odluke o boravku i radu (ili jasan put odbijanja ako je negativna)."
@@ -1013,11 +1020,11 @@
     },
     "address": {
       "title": "Prijavite adresu privremenog boravišta",
-      "why": "Državljanin treće zemlje na privremenom boravku mora prijaviti boravište (i kasnije promjene adrese) kod nadležne policijske uprave. Citirani rok teče od ulaska u Hrvatsku ili od dana promjene. To nije isti rok kao samoprijava kratkotrajnog smještaja (hotel/eVisitor).",
+      "why": "Državljanin treće zemlje na privremenom boravku mora prijaviti boravište i kasnije promjene adrese. Kontrolni popis usvaja citirani rok iz zakona, računat od ulaska ili od promjene. MUP-ova stranica postupka i dalje ispisuje stari iznos. To nije rok kratkotrajnog smještaja (hotel/eVisitor).",
       "how": {
-        "mup": "Pročitajte MUP postupak prijave ili promjene adrese stranca (Obrazac 16a).",
-        "desk": "Prijavite na nadležnom zagrebačkom šalteru za stvarnu adresu, s Obrascom 16a i dokazom smještaja.",
-        "verify": "Unesite citirani rok ({deadline}) u zajednički kalendar od ulaska ili od promjene adrese, zatim ponovno provjerite živu MUP stranicu postupka prije nego datum tretirate kao konačan."
+        "mup": "Pročitajte i izmjenu zakona i MUP-ovu stranicu postupka. U oba slučaja koristite Obrazac 16a.",
+        "desk": "Za adresu na području PU zagrebačke aktualna stranica „kako i gdje“ ovu prijavu prima e-mailom: Obrazac 16a, preslika putovnice te suglasnost stanodavca i osobna iskaznica ili ovjereni ugovor o najmu, u PDF-u na zg.drzavljanstvo.stranci@mup.hr.",
+        "verify": "Unesite citirani rok ({deadline}) u zajednički kalendar od ulaska ili od promjene adrese. Prije nego datum tretirate kao konačan ponovno otvorite karticu sukoba."
       },
       "evidence": "Potvrda / pečat prijave privremenog boravišta radnika (Obrazac 16a).",
       "caseHint": "Ne miješajte ovaj rok prijave boravišta nakon dozvole sa samoprijavom kratkotrajnog boravka u nacionalnom panelu. Stalni/dugotrajni boravak ima drugi MUP rok i nije ovaj put."
@@ -1096,13 +1103,24 @@
     },
     "a1": {
       "title": "Planirajte A1.1 hrvatski (latinica) za produženje",
-      "why": "Pravila produženja mogu tražiti dokaz A1.1 nakon citiranog razdoblja boravka; dio članaka je odgođen.",
+      "why": "Pravila produženja mogu tražiti dokaz A1.1 nakon citiranog razdoblja boravka. Članci o ispitu su odgođeni. Kad se primijene, trošak ispita snosi poslodavac.",
       "how": {
         "nn": "Pročitajte kontekst obveze A1.1 + latinice u NN 55/2026.",
         "deferred": "Tretirajte odgođeni datum stupanja na snagu kao milju za planiranje odgođenih članaka.",
         "schedule": "Rano počnite s učenjem jezika kako bi radnik bio spreman kad se pravilo primijeni na produženja."
       },
       "evidence": "Jezični plan s ciljem A1.1 latinica + odgođeni datum na kalendaru."
+    },
+    "workArea": {
+      "title": "Radite samo na području policijskih uprava upisanih u potvrdu",
+      "why": "Od izmjena iz lipnja 2026. radnik smije raditi samo u policijskim upravama upisanim u potvrdu. Dozvola za deficitarno zanimanje pokriva područja na kojima je to zanimanje deficitarno. Dozvola nakon testa tržišta rada pokriva upravu u kojoj test nije našao raspoloživu osobu. Rad izvan tog područja je prekršaj i može biti razlog ukidanja dozvole.",
+      "how": {
+        "certificate": "Prije rasporeda na lokaciju pročitajte policijske uprave na potvrdi.",
+        "venues": "Ne šaljite ovaj angažman na lokaciju izvan tih uprava, uključujući drugi grad u Hrvatskoj.",
+        "extend": "Ako rad mora pokriti više uprava, prije premještaja od HZZ-a zatražite test tržišta rada za ta područja. Zahtjev se može podnijeti i nakon izdavanja dozvole, a rezultat se upisuje u potvrdu."
+      },
+      "evidence": "Preslika potvrde s upisanim policijskim upravama, plus popis lokacija na kojima će ovaj radnik stvarno raditi.",
+      "caseHint": "Potvrda navodi policijske uprave. PU zagrebačka je jedna uprava za Grad Zagreb i Zagrebačku županiju, pa potvrda koja je navodi pokriva oboje. Ne pokriva drugu upravu, uključujući obalu, osim ako je i ta uprava upisana na potvrdi."
     },
     "renewal": {
       "title": "Postavite podsjetnike za produženje prije isteka",
@@ -1203,9 +1221,9 @@
         "decision": "Birano na koraku zanimanja. Ovaj čvor ne sprema zasebnu odluku.",
         "branchLmt": "Zadani put: podnesite test tržišta rada na HZZ-u, zatim koristite prozor pozitivnog mišljenja.",
         "branchUv": "Ne tretirajte ovu granu kao prečac. Potvrdite živi službeni popis na koraku zanimanja.",
-        "join": "Podnošenje za boravak i rad je isti šalter u oba slučaja. Korak testa tržišta rada je prolaz kad je aktivna grana preskoka.",
+        "join": "Obje grane zahtjev za boravak i rad podnose na portalu HZZ-a. Korak testa tržišta rada je prolaz kad je aktivna grana preskoka.",
         "workerDocs": "Spis radnika plus stavke ovisne o državljanstvu (npr. FBI za SAD) na stranici koraka.",
-        "filePermit": "Podnesite na nadležnom zagrebačkom šalteru policije / MUP-a. Pristojbe i obrasci su na koraku s citatima.",
+        "filePermit": "Novi zahtjev podnesite na portalu HZZ-a. Pristojbe i iznimke e-maila policije su na koraku, s citatima.",
         "startWork": "Odluka, biometrija, prijava adrese te prijave za socijalno/porez prije odobrenog početka rada.",
         "comply": "Držite datume, prozore mobilnosti i jezični plan u kalendaru nakon početka rada."
       },
@@ -1248,6 +1266,15 @@
       "meaning46": "Iznos naveden za druge svrhe privremenog boravka — nije put boravka i rada koji se ovdje koristi.",
       "pageNoteWork": "Živa MUP stranica o radu državljana trećih zemalja (odjeljak pristojbi).",
       "pageNoteTemp": "Živa MUP stranica pristojbi za privremeni boravak — druge svrhe."
+    },
+    "addressDeadline": {
+      "title": "Rok prijave adrese",
+      "summary": "Zakon i MUP-ova stranica postupka više ne navode isti broj dana.",
+      "spectrum": "Za ovaj kontrolni popis riješeno praćenjem zakona. Stranica postupka nije ažurirana.",
+      "meaning15": "Zakon o strancima čl. 178. st. 1. kako ga mijenja NN 55/2026: prijavite privremeni boravak i adresu u ovom roku od ulaska ili od promjene.",
+      "meaning3": "MUP-ova stranica postupka i dalje kaže da se osoba na privremenom boravku prijavljuje u roku od prije izmjene. Ne koristite je kao rok.",
+      "pageNoteStatute": "NN 55/2026, čl. 51., na snazi od 4. lipnja 2026. Zamjenjuje prethodni broj dana u čl. 178. st. 1. Zakona o strancima.",
+      "pageNoteMup": "Živa MUP stranica postupka prijave adrese, koja 20. studenoga 2026. još pokazuje stari rok za privremeni boravak."
     },
     "biometricFee": {
       "title": "Pristojba za izdavanje biometrijske iskaznice",

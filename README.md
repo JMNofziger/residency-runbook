@@ -59,4 +59,5 @@ Shared fees live in [`data/facts-catalog.json`](data/facts-catalog.json); contes
 | [artifacts/product-critique.md](artifacts/product-critique.md) | Post–Phase 6 critique + status addendum |
 | [artifacts/phase5-verification.md](artifacts/phase5-verification.md) | Phase 5 live source pass |
 | [artifacts/phase6e-verification.md](artifacts/phase6e-verification.md) | Stay-and-work fee €74.32 / Form 2a (fee source of truth) |
+| [artifacts/zagreb-2026-11-verification.md](artifacts/zagreb-2026-11-verification.md) | 20 Nov 2026 Zagreb pass: portal filing, contract, address clock, Form 17a |
 | [artifacts/facts-audit.md](artifacts/facts-audit.md) | Generated citation audit |

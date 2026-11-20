@@ -149,6 +149,15 @@
           "sourceTier": 1,
           "sourceName": "HZZ — Novi sustav zapošljavanja stranaca",
           "verifiedDate": "2026-07-31"
+        },
+        {
+          "id": "art99-check-inflow-natural",
+          "value": "€40,000",
+          "labelKey": "facts.art99InflowNaturalPerson",
+          "sourceUrl": "https://narodne-novine.nn.hr/clanci/sluzbeni/2026_05_55_692.html",
+          "sourceTier": 1,
+          "sourceName": "Narodne novine — NN 55/2026, Aliens Act Art. 99(1)(7)(b)",
+          "verifiedDate": "2026-11-20"
         }
       ],
       "caseHintKeys": ["art99.inflow.caseHint"]
